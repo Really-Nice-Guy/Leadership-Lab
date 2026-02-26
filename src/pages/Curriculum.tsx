@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { loadSessions, loadArticles, getFourCColorClass, getFourCBorderClass, getFourCTextClass } from '../utils/dataLoader';
+import { loadSessions, loadArticles, getFourCColorClass, getFourCTextClass } from '../utils/dataLoader';
 import type { Session, Article, Introspection, SessionResource } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 
@@ -700,12 +700,10 @@ function SessionCard({
   }, [isExpanded, totalSteps]);
 
   const getArticleById = (id: number) => articles.find(a => a.number === id);
-  const accentBorder = getFourCBorderClass(session.fourC);
   const accentText = getFourCTextClass(session.fourC);
 
   const renderItem = (item: RevealItem, idx: number) => {
     const isCurrent = idx === step - 1;
-    const isPast = idx < step - 1;
     const isVisible = idx < step;
 
     if (!isVisible) return null;
