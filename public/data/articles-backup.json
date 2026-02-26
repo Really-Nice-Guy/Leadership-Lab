@@ -1,0 +1,1652 @@
+[
+  {
+    "number": 1,
+    "title": "Rethinking Office Work: Beyond Obligation",
+    "date": "26 February 2023",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 2,
+    "title": "Building AI-Powered Data Applications on Snowflake",
+    "date": "5 March 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 3,
+    "title": "Power of Congruency",
+    "date": "23 April 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [
+      "Communication"
+    ],
+    "relevance": {
+      "Communication": "Discusses open dialogs and resolving disagreements constructively"
+    },
+    "content": ""
+  },
+  {
+    "number": 4,
+    "title": "Blockchain and Crypto",
+    "date": "16 April 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 5,
+    "title": "Beyond the ChatGPT Hype: Understanding the Implications",
+    "date": "9 April 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 6,
+    "title": "Who is in your team?",
+    "date": "2 April 2023",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [
+      "Colleagues"
+    ],
+    "relevance": {
+      "Colleagues": "Redefining team membership to include your manager"
+    },
+    "content": ""
+  },
+  {
+    "number": 7,
+    "title": "Lessons from Customer Engagement and Professional Pitch",
+    "date": "26 March 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [
+      "Communication",
+      "Customer"
+    ],
+    "relevance": {
+      "Communication": "Customer communication requires practice and preparation",
+      "Customer": "Emphasizes importance of practice in customer showcases"
+    },
+    "content": ""
+  },
+  {
+    "number": 8,
+    "title": "The SVB Banking Crisis: A Chain Reaction from Stimulus to Collapse",
+    "date": "19 Mar 2023",
+    "topics": [
+      "Macroeconomics",
+      " Geopolitics",
+      " Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 9,
+    "title": "The SVB Crisis and Its Impact on Venture Capital",
+    "date": "12 Mar 2023",
+    "topics": [
+      "Technology",
+      " Macroeconomics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 10,
+    "title": "AI Disruption in Legal Services: The Harvey.AI Case",
+    "date": "April 30 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 11,
+    "title": "Organic vs. Inorganic Innovation Strategies",
+    "date": "May 7 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 12,
+    "title": "Strategic Adjacency in Business Growth",
+    "date": "May 14 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 13,
+    "title": "AI Regulation: Insights from Congressional Hearings",
+    "date": "May 21 2023",
+    "topics": [
+      "Technology",
+      " Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 14,
+    "title": "The Decline of Traditional News Media",
+    "date": "May 28 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 15,
+    "title": "Introduction: The Sunday Thoughts Series and AI's Dual Nature",
+    "date": "June 4 2023",
+    "topics": [
+      "Technology",
+      " Geopolitics"
+    ],
+    "sessions": [
+      "Environment"
+    ],
+    "relevance": {
+      "Environment": "Balancing AI opportunities with risks in the external environment"
+    },
+    "content": ""
+  },
+  {
+    "number": 16,
+    "title": "Displacement of Traditional Businesses",
+    "date": "June 11 2023",
+    "topics": [
+      "Technology",
+      " Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 17,
+    "title": "\u2018Agility vs Value\u2019 of a Work Product",
+    "date": "June 18 2023",
+    "topics": [
+      "Macroeconomics",
+      " Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 18,
+    "title": "Outer Space and Communications",
+    "date": "June 25 2023",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 19,
+    "title": "Robotic Automation: Disrupting Physical Service Businesses",
+    "date": "July 1 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 20,
+    "title": "Creating Products in the Outer Space",
+    "date": "July 9 2023",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 21,
+    "title": "Monopoly is a situation where there are no close substitute...",
+    "date": "July 16 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [
+      "Competition"
+    ],
+    "relevance": {
+      "Competition": "Understanding monopoly power through the lens of imperfect substitutes"
+    },
+    "content": ""
+  },
+  {
+    "number": 22,
+    "title": "Science of Creating Art",
+    "date": "July 23 2023",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 23,
+    "title": "Unionizing Superconductivity in the Tech Mix",
+    "date": "July 30 2023",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 24,
+    "title": "Technology Macros",
+    "date": "August 6 2023",
+    "topics": [
+      "Technology",
+      " Macroeconomics",
+      " Geopolitics"
+    ],
+    "sessions": [
+      "Environment"
+    ],
+    "relevance": {
+      "Environment": "How technology, macroeconomics, and geopolitics interconnect"
+    },
+    "content": ""
+  },
+  {
+    "number": 25,
+    "title": "In honor of the recently celebrated \u2018Youth Day\u2019 (August...",
+    "date": "August 13 2023",
+    "topics": [
+      "Macroeconomics",
+      " Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 26,
+    "title": "Few inquisitive souls asked me for the list of 9 countries...",
+    "date": "August 20 2023",
+    "topics": [
+      "Technology",
+      " Geopolitics"
+    ],
+    "sessions": [
+      "Environment"
+    ],
+    "relevance": {
+      "Environment": "Data as strategic resource in the global competitive landscape"
+    },
+    "content": ""
+  },
+  {
+    "number": 27,
+    "title": "Not sure how many of you registered that there was a...",
+    "date": "August 27 2023",
+    "topics": [
+      "Macroeconomics",
+      " Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 28,
+    "title": "AI has come back in the spotlight again this week.",
+    "date": "September 3 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 29,
+    "title": "G7, established since 1975, as an organization is made of...",
+    "date": "September 10 2023",
+    "topics": [
+      "Macroeconomics",
+      " Geopolitics",
+      " Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 30,
+    "title": "Premise of Energy",
+    "date": "September 17 2023",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [
+      "Creating_Value"
+    ],
+    "relevance": {
+      "Creating_Value": "Why 10x exponential thinking beats incremental 1x improvements"
+    },
+    "content": ""
+  },
+  {
+    "number": 31,
+    "title": "IPOs and Direct Selling",
+    "date": "September 24 2023",
+    "topics": [
+      "Technology",
+      " Macroeconomics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 32,
+    "title": "3 Gs of Pathway to \u2018200 years\u2019 long life",
+    "date": "October 1 2023",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 33,
+    "title": "The ChatGPT Revolution and What It Means",
+    "date": "October 8 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 34,
+    "title": "Sanctions and Relationships",
+    "date": "October 15 2023",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 35,
+    "title": "Have you ever imagined or talked about a pill that could be a substitute to eating food?",
+    "date": "October 22 2023",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 36,
+    "title": "Perseverance All the Way",
+    "date": "October 29 2023",
+    "topics": [
+      "Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 37,
+    "title": "A Tale of Two Tenancies",
+    "date": "November 5 2023",
+    "topics": [
+      "Technology",
+      " Macroeconomics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 38,
+    "title": "Recharge, Rejuvenate and Reinvent, Reboot as required",
+    "date": "November 12 2023",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 39,
+    "title": "A lot happened this week between Microsoft announcements at...",
+    "date": "November 19 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 40,
+    "title": "Expect the Unexpected",
+    "date": "November 26 2023",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [
+      "Colleagues"
+    ],
+    "relevance": {
+      "Colleagues": "Using delegation strategically to develop future leaders"
+    },
+    "content": ""
+  },
+  {
+    "number": 41,
+    "title": "Power Needs",
+    "date": "December 3 2023",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 42,
+    "title": "World Bank and the Banks of the World",
+    "date": "December 10 2023",
+    "topics": [
+      "Macroeconomics",
+      " Geopolitics"
+    ],
+    "sessions": [
+      "Creating_Value"
+    ],
+    "relevance": {
+      "Creating_Value": "How constraints force innovation more effectively than abundant resources"
+    },
+    "content": ""
+  },
+  {
+    "number": 43,
+    "title": "Impacts of Geopolitical Conflicts on Global Economies and...",
+    "date": "December 17 2023",
+    "topics": [
+      "Geopolitics"
+    ],
+    "sessions": [
+      "Environment"
+    ],
+    "relevance": {
+      "Environment": "Cross-cultural awareness in global business environment"
+    },
+    "content": ""
+  },
+  {
+    "number": 44,
+    "title": "Definitions",
+    "date": "24 December 2023",
+    "topics": [
+      "Macroeconomics",
+      " Geopolitics"
+    ],
+    "sessions": [
+      "Competition",
+      "Environment",
+      "Politics"
+    ],
+    "relevance": {
+      "Competition": "Strategic positioning and competitive dynamics with integrity",
+      "Environment": "How external regulations and politics affect competitive landscape",
+      "Politics": "Navigating antitrust and political pressures while maintaining values"
+    },
+    "content": ""
+  },
+  {
+    "number": 45,
+    "title": "Happy New Year to all. Let\u2019s get ready to ring in the new...",
+    "date": "31 December 2023",
+    "topics": [
+      "Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 46,
+    "title": "Generative AI was a hot topic for the investors in 2023 and...",
+    "date": "6 January 2024",
+    "topics": [
+      "Technology",
+      " Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 47,
+    "title": "Bitcoin introduction in ETF (Exchange Traded Funds)",
+    "date": "January 13 2024",
+    "topics": [
+      "Technology",
+      " Macroeconomics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 48,
+    "title": "The Rise of Phoenixes",
+    "date": "January 20 2024",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 49,
+    "title": "The World Economic Forum (WEF) is an international...",
+    "date": "January 28 2024",
+    "topics": [
+      "Technology",
+      " Macroeconomics",
+      " Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 50,
+    "title": "Ideas and Startups",
+    "date": "February 4 2024",
+    "topics": [
+      "Macroeconomics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 51,
+    "title": "High Performing & Trustworthy Culture",
+    "date": "February 11 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [
+      "Culture_Awareness"
+    ],
+    "relevance": {
+      "Culture_Awareness": "Trust as the foundation of high performance teams"
+    },
+    "content": ""
+  },
+  {
+    "number": 52,
+    "title": "Tale of Two Social Media",
+    "date": "February 18 2024",
+    "topics": [
+      "Technology",
+      " Macroeconomics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 53,
+    "title": "I decided to catch up on my AI notes this week so this one...",
+    "date": "February 25 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 54,
+    "title": "Here is part II of the AI/LLM write-up with addition of a...",
+    "date": "March 3 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 55,
+    "title": "This write-up is a tribute to the \u2018Amp\u2019 that Frank...",
+    "date": "March 10 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 56,
+    "title": "Rewards, Results and Returns",
+    "date": "March 17 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 57,
+    "title": "I got to see Jeff Bezos\u2019 leadership video again this weekend",
+    "date": "March 24 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 58,
+    "title": "Growth of Nations & People",
+    "date": "March 31 2024",
+    "topics": [
+      "Technology",
+      " Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 59,
+    "title": "Last week, I wrote about the X-Factors required as major...",
+    "date": "April 6, 2024",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 60,
+    "title": "We don\u2019t need no education\u2026",
+    "date": "April 13, 2024",
+    "topics": [
+      "Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 61,
+    "title": "Hardness of Soft Skills",
+    "date": "April 20, 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 62,
+    "title": "The ChatGPT Revolution and What It Means",
+    "date": "April 27, 2024",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 63,
+    "title": "Emulating Machine\u2019s Intelligence in Humans",
+    "date": "May 5, 2024",
+    "topics": [
+      "Technology",
+      " Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 64,
+    "title": "Basics of Cellular Biology",
+    "date": "May 12, 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 65,
+    "title": "Unending Grit at Berkshire Hathaway",
+    "date": "May 19 2024",
+    "topics": [
+      "Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 66,
+    "title": "Life as it exists and as it existed",
+    "date": "May 26th, 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 67,
+    "title": "Quantum for Solace",
+    "date": "June 02, 2024",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 68,
+    "title": "Maximum Cities",
+    "date": "9 June, 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 69,
+    "title": "Memory Lanes of Casualties",
+    "date": "16 June 2024",
+    "topics": [
+      "Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 70,
+    "title": "we replaced a subscription of a CBT platform with pay per use methodology",
+    "date": "24 June 2024",
+    "topics": [
+      "Technology",
+      " Macroeconomics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 71,
+    "title": "Ripe like an Alphonso and Age with Grace like a Vintage Wine",
+    "date": "30 June 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 72,
+    "title": "Back Pocket Objects/Strategies",
+    "date": "7 July 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 73,
+    "title": "Shocking news to wake up with",
+    "date": "14 July 2024",
+    "topics": [
+      "Technology",
+      " Macroeconomics",
+      " Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 74,
+    "title": "Happiness: Our deep rooted mind is happy if we are making progress with life",
+    "date": "21 July 2024",
+    "topics": [
+      "Technology",
+      " Macroeconomics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 75,
+    "title": "Last set of thoughts with this phase of life as a \u2018Snowflake\u2019",
+    "date": "27 JULY 2024",
+    "topics": [
+      "Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 76,
+    "title": "By now we are aware of Tesla, SpaceX, The Boring Company, X...",
+    "date": "4 Aug 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 77,
+    "title": "Questioning the Definitions",
+    "date": "11 Aug 2024",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 78,
+    "title": "Understanding the Recent Economic Turmoil",
+    "date": "18 Aug 2024",
+    "topics": [
+      "Macroeconomics",
+      " Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 79,
+    "title": "What does your week look like?",
+    "date": "25 Aug 2024",
+    "topics": [
+      "Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 80,
+    "title": "Matters Of Mind",
+    "date": "1 Sep 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 81,
+    "title": "Spend Spectrum, Cost of Living Adjustments and Purchasing...",
+    "date": "8 Sep 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 82,
+    "title": "Have you ever thought of how inflation is measured?",
+    "date": "Sep 15, 2024",
+    "topics": [
+      "Macroeconomics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 83,
+    "title": "Firstly, my sincere apology for the miss last weekend",
+    "date": "Sep 29, 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 84,
+    "title": "Back to AI thoughts after a certain gap",
+    "date": "Oct 6, 2024",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 85,
+    "title": "Moglis of The AI Jungle",
+    "date": "Oct 13, 2024",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 86,
+    "title": "Past week has been eventful in two ways",
+    "date": "Oct 20, 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 87,
+    "title": "How to be a Schmoozer?",
+    "date": "Nov 4, 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 88,
+    "title": "Somehow magically, the last few weeks have been focused on...",
+    "date": "Nov 11, 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 89,
+    "title": "\u2018Internal\u2019 Neuralink",
+    "date": "Nov 18, 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [
+      "Charisma"
+    ],
+    "relevance": {
+      "Charisma": "Building executive presence through authentic body language and confidence"
+    },
+    "content": ""
+  },
+  {
+    "number": 90,
+    "title": "Magic of 90",
+    "date": "Nov 25, 2024",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [
+      "Environment"
+    ],
+    "relevance": {
+      "Environment": "BRICS expansion and shifting global economic power"
+    },
+    "content": ""
+  },
+  {
+    "number": 91,
+    "title": "You have seen enough memes of top-notch consultants...",
+    "date": "1 December 2024",
+    "topics": [
+      "Macroeconomics",
+      " Geopolitics"
+    ],
+    "sessions": [
+      "Environment"
+    ],
+    "relevance": {
+      "Environment": "Deglobalization trends reshaping supply chains and strategy"
+    },
+    "content": ""
+  },
+  {
+    "number": 92,
+    "title": "I was on a trip to Rajasthan last week, and after a very...",
+    "date": "15 December 2024",
+    "topics": [
+      "Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 93,
+    "title": "When you look back at life, you can think of major milestones and setbacks",
+    "date": "22 December 2024",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 94,
+    "title": "As we end the year, let's think about Agents (AI) and Agency (Human)",
+    "date": "29 December 2024",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 95,
+    "title": "As we kick into the new year, I wonder how we define some...",
+    "date": "5 January 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 96,
+    "title": "Rome is Burning",
+    "date": "12 January 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 97,
+    "title": "How AI Changes What We Value in Talent",
+    "date": "19 January 2025",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 98,
+    "title": "The ChatGPT Revolution and What It Means",
+    "date": "26 January 2025",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 99,
+    "title": "All of us have a family, a trusted circle of friends and a professional environment",
+    "date": "2 February 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 100,
+    "title": "Corporate enters Politics",
+    "date": "9 February 2025",
+    "topics": [
+      "Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 101,
+    "title": "In 2 Decades",
+    "date": "February 16, 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 102,
+    "title": "My first introduction to a computing processor (CPU) was to...",
+    "date": "February 23, 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 103,
+    "title": "I have been coaching a bunch of leaders for the past 2 months",
+    "date": "02 March 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 104,
+    "title": "Knowing your personal chatter (1): Do you talk to yourself?",
+    "date": "09 March 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 105,
+    "title": "A write-up of a modern day Fantasy Land.",
+    "date": "16 March 2025",
+    "topics": [
+      "Technology",
+      " Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 106,
+    "title": "\u2018Personal\u2019 Expectations",
+    "date": "23 March 2025",
+    "topics": [
+      "Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 107,
+    "title": "The Crowded Space (Refresher)",
+    "date": "30 March 2025",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 108,
+    "title": "Television sets at most of the hotels in California are not...",
+    "date": "6 April 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 109,
+    "title": "Rank",
+    "date": "13 April 2025",
+    "topics": [
+      "Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 110,
+    "title": "Making peace with AI",
+    "date": "20 April 2025",
+    "topics": [
+      "Technology",
+      " Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 111,
+    "title": "This write-up though delayed is an instigator and a bit longer",
+    "date": "27 April 2025",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 112,
+    "title": "Technological Explosion and its impact on Wealth",
+    "date": "4 May 2025",
+    "topics": [
+      "Technology",
+      " Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 113,
+    "title": "\u201cGut feelings\u201d are instincts arising from the brain-gut connection",
+    "date": "11 May 2025",
+    "topics": [
+      "Geopolitics"
+    ],
+    "sessions": [
+      "Self_Awareness"
+    ],
+    "relevance": {
+      "Self_Awareness": "How intuition and gut feelings drive most decision-making"
+    },
+    "content": ""
+  },
+  {
+    "number": 114,
+    "title": "I was speaking at one of our company events and during the...",
+    "date": "18 May 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [
+      "Communication"
+    ],
+    "relevance": {
+      "Communication": "Preparing for high-stakes presentations to executives"
+    },
+    "content": ""
+  },
+  {
+    "number": 115,
+    "title": "Did you ever get a lower than expected performance review or a poor grade in your assessment?",
+    "date": "25 May 2025",
+    "topics": [
+      "Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 116,
+    "title": "Readers of this post are a combination of talented AI and...",
+    "date": "01 June 2025",
+    "topics": [
+      "Geopolitics",
+      " Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 117,
+    "title": "Unmanning in the Real World",
+    "date": "08 June 2025",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 118,
+    "title": "As a young person, are your parents critical about your excessive spending habits?",
+    "date": "15 June 2025",
+    "topics": [
+      "Macroeconomics",
+      " Geopolitics"
+    ],
+    "sessions": [
+      "Culture_Awareness"
+    ],
+    "relevance": {
+      "Culture_Awareness": "How organizational culture shapes behaviors and financial habits"
+    },
+    "content": ""
+  },
+  {
+    "number": 119,
+    "title": "Equation of Adversaries",
+    "date": "29 June 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 120,
+    "title": "You just need to Keep-in-Touch",
+    "date": "06 July 2025",
+    "topics": [
+      "Technology",
+      " Geopolitics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 121,
+    "title": "You call your best friend for her advice on a situation",
+    "date": "13 July 2025",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [
+      "Communication",
+      "Politics"
+    ],
+    "relevance": {
+      "Communication": "Recognizing and avoiding toxic communication patterns",
+      "Politics": "Examples of toxic corporate language and culture"
+    },
+    "content": ""
+  },
+  {
+    "number": 122,
+    "title": "Opinionated Inner Circles",
+    "date": "20 July 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [
+      "Culture_Awareness",
+      "Politics"
+    ],
+    "relevance": {
+      "Culture_Awareness": "How inner circles damage organizational culture and trust",
+      "Politics": "Political dynamics of inner circles in organizations"
+    },
+    "content": ""
+  },
+  {
+    "number": 123,
+    "title": "Chasing the Next Best Thing",
+    "date": "27 July 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [
+      "Goals",
+      "Creating_Value"
+    ],
+    "relevance": {
+      "Goals": "The difference between achievement addiction and true fulfillment",
+      "Creating_Value": "Questioning if endless achievement creates real value"
+    },
+    "content": ""
+  },
+  {
+    "number": 124,
+    "title": "In my distant past, I had a colleague (Let\u2019s call him Sam)...",
+    "date": "3 Aug 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 125,
+    "title": "Characterizing an AI Architect",
+    "date": "17 Aug 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 126,
+    "title": "Turning Butterflies into the Butterfly Effect",
+    "date": "24 Aug 2025",
+    "topics": [
+      "Geopolitics",
+      " Thought Leadership"
+    ],
+    "sessions": [
+      "Communication",
+      "Charisma"
+    ],
+    "relevance": {
+      "Communication": "Overcoming stage fright and building presentation confidence",
+      "Charisma": "Building presence by overcoming fear and mastering delivery"
+    },
+    "content": ""
+  },
+  {
+    "number": 127,
+    "title": "The Subtle Art of Getting Things Done",
+    "date": "9 September 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [
+      "Self_Awareness"
+    ],
+    "relevance": {
+      "Self_Awareness": "The strategic value of pessimistic thinking and managing expectations"
+    },
+    "content": ""
+  },
+  {
+    "number": 128,
+    "title": "Benefits from Growth & Growing Pains",
+    "date": "14 September 2025",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 129,
+    "title": "Bullying and Condescension",
+    "date": "26 September 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [
+      "Politics"
+    ],
+    "relevance": {
+      "Politics": "Understanding the origins and dynamics of workplace bullying"
+    },
+    "content": ""
+  },
+  {
+    "number": 130,
+    "title": "Are You Getting the Best Out of Your Model Interactions?",
+    "date": "12 October 2025",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 131,
+    "title": "Potential Overdose: Are Efforts Outrunning the Value Cycle?",
+    "date": "2 November 2025",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [
+      "Creating_Value"
+    ],
+    "relevance": {
+      "Creating_Value": "Recognizing when effort and activity outrun actual value creation"
+    },
+    "content": ""
+  },
+  {
+    "number": 132,
+    "title": "The Tale of the Second City: AI's Gold Rush or Fool's Gold?",
+    "date": "09 November 2025",
+    "topics": [
+      "Technology",
+      " Macroeconomics"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 133,
+    "title": "Telescope or Microscope",
+    "date": "23 November 2025",
+    "topics": [
+      "Technology"
+    ],
+    "sessions": [],
+    "relevance": {},
+    "content": ""
+  },
+  {
+    "number": 135,
+    "title": "Benchmarking for the Art of (Im)possible",
+    "date": "15 December 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [
+      "Goals"
+    ],
+    "relevance": {
+      "Goals": "Benchmarking against excellence, not mediocrity or comfort"
+    },
+    "content": ""
+  },
+  {
+    "number": 136,
+    "title": "Is your life a Nextflix Revenge Series?",
+    "date": "28 December 2025",
+    "topics": [
+      "Thought Leadership"
+    ],
+    "sessions": [
+      "Goals"
+    ],
+    "relevance": {
+      "Goals": "Competing with standards and personal growth, not with people"
+    },
+    "content": ""
+  }
+]

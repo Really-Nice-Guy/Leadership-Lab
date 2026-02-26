@@ -1,0 +1,546 @@
+[
+  {
+    "id": "communication",
+    "name": "Communicating with Impact",
+    "day": 1,
+    "time": "09:15 - 10:00",
+    "fourC": "Communication",
+    "coreTopics": [
+      "Impactful Communications with Meaningful Insights",
+      "Communicating and Storytelling",
+      "Context Setting and Audience Awareness",
+      "Appraisals and Feedback Forward"
+    ],
+    "articles": [3, 7, 114, 121, 126],
+    "hasContent": true,
+    "description": "Impactful communications go beyond words — they combine meaningful insights with powerful storytelling. This session explores how to craft your voice, structure your thoughts for articulation, and set context with your audience at every level.",
+    "discussionPoints": [
+      "Impactful Communications with Meaningful Insights",
+      "Communicating and Storytelling",
+      "Storytellers/Storysellers: Criticality of your Voice",
+      "Thoughts, Structure to Articulation — All through the Session",
+      "Context Setting with the Audience at all levels (Timing, Clarity, & Objectivity)",
+      "With the team: Formal vs. Informal, Time spent, Being on-time, Feelings, Agenda",
+      "Time Zones and Presence (Tele-presence) vs. Written/Interpreted",
+      "Consistency across geography & levels",
+      "Appraisals: Give/Seek, Formal vs Instantaneous, Recognition vs. Feedback Forward",
+      "Video Break: Fake it till you become it"
+    ],
+    "introspections": [
+      {
+        "title": "Introspection 1: My Communication Styles",
+        "prompts": [
+          "3 Things that are good in the environment",
+          "3 Things that I will work to change",
+          "How will I fake it till I become it?"
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "title": "Your body language may shape who you are",
+        "url": "https://www.ted.com/talks/amy_cuddy_your_body_language_shapes_who_you_are",
+        "source": "TED Talk — Amy Cuddy"
+      },
+      {
+        "title": "Fake it till you become it",
+        "url": "https://www.youtube.com/watch?v=RVmMeMcGc0Y",
+        "source": "YouTube — Video Break"
+      }
+    ]
+  },
+  {
+    "id": "customer",
+    "name": "Customer First",
+    "day": 1,
+    "time": "10:00 - 10:30",
+    "fourC": "Customer",
+    "coreTopics": [
+      "Who is my customer?",
+      "Customer Service vs. Customer Experience",
+      "Communicating with customers"
+    ],
+    "articles": [7],
+    "hasContent": true,
+    "description": "Understanding the difference between customer service and customer experience is critical. This session focuses on identifying your customers and building meaningful communication with them.",
+    "discussionPoints": [
+      "Who is my customer? — Identifying internal and external stakeholders",
+      "Distinguishing between Customer Service and Customer Experience",
+      "How do I communicate with my direct customers?",
+      "Meetings — structured and purposeful interactions",
+      "Reach out & Health Check — proactive relationship management",
+      "Reporting — keeping stakeholders informed"
+    ],
+    "introspections": [
+      {
+        "title": "Introspection 2: My Customer",
+        "prompts": [
+          "3 Things that work well for my customer today",
+          "3 Things that I will work to change to improve my customer's experience"
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "title": "Know the Difference Between Customer Service and Customer Experience",
+        "url": "https://hbr.org/sponsored/2016/03/know-the-difference-between-customer-service-and-customer-experience",
+        "source": "Harvard Business Review"
+      }
+    ]
+  },
+  {
+    "id": "culture",
+    "name": "Culture Awareness",
+    "day": 1,
+    "time": "10:30 - 11:15",
+    "fourC": "Cognizance",
+    "coreTopics": [
+      "Understanding organizational culture",
+      "Cross-cultural interactions",
+      "Team dynamics",
+      "Psychological safety"
+    ],
+    "articles": [51, 118, 122],
+    "hasContent": true,
+    "description": "Culture is a system of behavior that helps us act in acceptable and familiar ways — but there are so many variances. This session explores how cultural awareness improves leadership.",
+    "discussionPoints": [
+      "Culture — a system of behavior that helps us act in acceptable and familiar ways, but with many variances",
+      "Understanding cross-regional and cross-national interactions",
+      "Identifying unique characteristics observed in cross-cultural work",
+      "Learnings that help track what is unique about these experiences",
+      "Building a personal roadmap for cross-cultural competence"
+    ],
+    "introspections": [
+      {
+        "title": "Introspection 3: Cultural Awareness",
+        "prompts": [
+          "Profile of my cultural interactions (Current and Past)",
+          "Describe cross-regional and cross-nation/continent interactions you have had — what unique characteristics did you observe?",
+          "My Journey: 3 things I will do to continue enhancing my ability to work cross-culturally"
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "title": "Getting to Sí, Ja, Oui, Hai, and Da",
+        "url": "https://hbr.org/2015/12/getting-to-si-ja-oui-hai-and-da",
+        "source": "Harvard Business Review"
+      }
+    ]
+  },
+  {
+    "id": "goals",
+    "name": "What goals are we seeking for?",
+    "day": 1,
+    "time": "11:30 - 12:00",
+    "fourC": "Cognizance",
+    "coreTopics": [
+      "SMART goal setting",
+      "Goal categories and alignment",
+      "Professional vs. organizational goals",
+      "10-year vision"
+    ],
+    "articles": [123, 135, 136],
+    "hasContent": true,
+    "description": "Setting well-defined SMART goals is fundamental to leadership. This session examines goal categories ranging from disruptive transformation to instinctive decision-making, and aligns personal professional goals with organizational objectives.",
+    "discussionPoints": [
+      "Are there well-defined SMART goals? What are they?",
+      "Goal categories — What's on the table?",
+      "1. Disruptive Transformation",
+      "2. Revenue Impacting",
+      "3. Savings Impacting",
+      "4. Cost Avoidance",
+      "5. Efficiency (Time & Resources)",
+      "6. Experiential",
+      "7. Instinctive",
+      "Are your SMART goals truly smart?"
+    ],
+    "introspections": [
+      {
+        "title": "Introspection 4: Management Goals",
+        "prompts": [
+          "My manager's goals (Top 3)",
+          "Next level manager's goals (Top 3)"
+        ]
+      },
+      {
+        "title": "Introspection 5: Professional Goals",
+        "prompts": [
+          "My Professional goals (Top 3)",
+          "Is there a conflict between what my organization/manager wants me to work on vs. my journey towards my professional goals?",
+          "My Vision of Professional Life in 10 Years"
+        ]
+      }
+    ],
+    "resources": []
+  },
+  {
+    "id": "colleagues",
+    "name": "My Colleagues",
+    "day": 1,
+    "time": "12:00 - 12:30",
+    "fourC": "Cognizance",
+    "coreTopics": [
+      "Team composition and strengths",
+      "Peer dynamics and competition",
+      "Span of influence",
+      "Out-of-the-box thinking"
+    ],
+    "articles": [6, 40],
+    "hasContent": true,
+    "description": "Understanding your team's composition and your peer relationships is essential for effective leadership. This session explores both team dynamics and the nature of peer competition.",
+    "discussionPoints": [
+      "My Team's Composition — Do I understand their strengths & weaknesses?",
+      "What are the top 3 business expectations of my team?",
+      "What is my support structure? Am I supporting the team on a transactional basis or do I have enough support to think outside the box?",
+      "For individual contributors: How much out-of-the-box thinking do I do?",
+      "My Peers — How do I compete with my peers?",
+      "How do I feel about my peers? Is there a lot of politics?",
+      "What areas are part of my organizational/influential span of control?",
+      "Am I able to influence the outside world with my out-of-the-box thinking?"
+    ],
+    "introspections": [],
+    "resources": []
+  },
+  {
+    "id": "competition",
+    "name": "Competition",
+    "day": 1,
+    "time": "12:30 - 12:45",
+    "fourC": "Cognizance",
+    "coreTopics": [
+      "Understanding competitive landscape",
+      "Perceived vs. real competition",
+      "External competition",
+      "Competing with yourself"
+    ],
+    "articles": [21, 44],
+    "hasContent": true,
+    "description": "Competition comes in many forms — from peers and departments to external forces and your own self-imposed limitations. Not all perception is reality.",
+    "discussionPoints": [
+      "Peers, Departments, and Friends — where does competition arise?",
+      "Perceived Competition — Not all perception is reality",
+      "External Competition — understanding the broader landscape",
+      "Self — the most important competitor you face"
+    ],
+    "introspections": [
+      {
+        "title": "Introspection 6: My Takeaway about the Competition",
+        "prompts": [
+          "What is my key takeaway about how competition shapes my leadership?"
+        ]
+      }
+    ],
+    "resources": []
+  },
+  {
+    "id": "environment",
+    "name": "Environment",
+    "day": 1,
+    "time": "12:45 - 13:00",
+    "fourC": "Cognizance",
+    "coreTopics": [
+      "Departmental and corporate awareness",
+      "Geographic and national factors",
+      "International dynamics",
+      "The technology landscape"
+    ],
+    "articles": [15, 24, 26, 43, 44, 90, 91],
+    "hasContent": true,
+    "description": "Leaders must understand the environment at every level — from departmental dynamics all the way to international trends and the evolving tech world.",
+    "discussionPoints": [
+      "Departmental environment — what shapes your immediate surroundings?",
+      "Corporate environment — the broader organizational context",
+      "Geographic factors — how location affects business",
+      "National landscape — economic and policy influences",
+      "International dynamics — global trends and cross-border considerations",
+      "The Tech World — staying aware of technological disruption"
+    ],
+    "introspections": [
+      {
+        "title": "Introspection 7: My Roadmap to Understand the World",
+        "prompts": [
+          "What is my roadmap for staying aware of the environment at all levels?"
+        ]
+      }
+    ],
+    "resources": []
+  },
+  {
+    "id": "self-awareness",
+    "name": "Self-Awareness",
+    "day": 1,
+    "time": "13:30 - 15:00",
+    "fourC": "Cognizance",
+    "coreTopics": [
+      "Strengths and opportunity areas",
+      "Personal brand",
+      "Accomplishments and learning",
+      "The elevator pitch"
+    ],
+    "articles": [113, 127],
+    "hasContent": true,
+    "description": "The longest session of the workshop — because self-awareness is the foundation of leadership. From understanding your strengths to crafting your elevator pitch, this deep-dive builds the core of your leadership identity.",
+    "discussionPoints": [
+      "Fast or Right? — The traits of leaders who do things fast and well",
+      "Understanding your personal strengths and opportunity areas",
+      "Tracking accomplishments by year",
+      "Defining your personal brand — from Comprehension, Connection, Collaboration, Confrontation, Conversation, Community, Context, Competition, Clarity, Cascade, Content, and Comfort",
+      "Recognizing accolades and learning from mistakes",
+      "Current learning sources — how are you developing yourself?",
+      "My Potential — What am I ready to do?",
+      "My Pitch — 90 seconds to make an impact"
+    ],
+    "introspections": [
+      {
+        "title": "Introspection 8: My Strengths (Top 3)",
+        "prompts": [
+          "What are my top 3 strengths?"
+        ]
+      },
+      {
+        "title": "Introspection 9: My Opportunity Areas (Up to 3)",
+        "prompts": [
+          "What are my key areas for improvement?"
+        ]
+      },
+      {
+        "title": "Introspection 10: My Accomplishments by Year (Top 3)",
+        "prompts": [
+          "What are my top 3 accomplishments this year?"
+        ]
+      },
+      {
+        "title": "Introspection 11: My Brand",
+        "prompts": [
+          "Pick any 3 brand qualifiers: Comprehension, Connection, Collaboration, Confrontation, Conversation, Community, Context, Competition, Clarity, Cascade, Content, Comfort — or choose your own"
+        ]
+      },
+      {
+        "title": "Introspection 12: My Accolades (Up to 3)",
+        "prompts": [
+          "What recognition have I received?"
+        ]
+      },
+      {
+        "title": "Introspection 13: Mistakes I Remember (Top 3)",
+        "prompts": [
+          "What mistakes can I learn from?"
+        ]
+      },
+      {
+        "title": "Introspection 14: Current Learning Sources",
+        "prompts": [
+          "Where am I currently learning and growing?"
+        ]
+      },
+      {
+        "title": "Introspection 15: My Potential",
+        "prompts": [
+          "What am I ready to do?"
+        ]
+      },
+      {
+        "title": "Introspection 16: My Pitch",
+        "prompts": [
+          "90 seconds with the chairman — what do you say?"
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "title": "The Traits of Leaders Who Do Things Fast and Well",
+        "url": "https://hbr.org/2016/11/the-traits-of-leaders-who-do-things-fast-and-well",
+        "source": "Harvard Business Review"
+      }
+    ]
+  },
+  {
+    "id": "metrics",
+    "name": "Metrics",
+    "day": 2,
+    "time": "09:15 - 10:30",
+    "fourC": "Cognizance",
+    "coreTopics": [
+      "Performance metrics",
+      "Measuring what matters",
+      "KPIs and continuous feedback",
+      "Daily habits for results"
+    ],
+    "articles": [],
+    "hasContent": false,
+    "emptyReason": "After deep-reading all 135 Sunday Thoughts articles, none were found with genuine relevance to performance metrics and KPIs.",
+    "description": "\"Measure what is measurable and make measurable what is not so.\" — Galileo. This session focuses on eliminating subjectivity through measurement, and building daily habits that compound into huge results.",
+    "discussionPoints": [
+      "What do you measure (for self and/or the team)?",
+      "What does your manager measure?",
+      "What are predictable measures? Seasonal measures?",
+      "What is measured in your appraisal?",
+      "7 Tiny Daily Habits That Lead to Huge Results (Nicolas Cole):",
+      "1. Wake up when you say you're going to wake up — keep the first promise of the day",
+      "2. Write down 10 ideas per day — flex your creative muscle",
+      "3. Eat a healthy breakfast, lunch, and dinner — use meals as anchors for reading, networking, and family",
+      "4. Read for 30 minutes every day — that's 24 books a year",
+      "5. Get back in your body — 30-60 minutes of physical activity to maintain a clear head",
+      "6. Meditate for 15 minutes — make time to get in touch with your thoughts",
+      "7. Reflect before bed — jot down what went well and what to do differently tomorrow"
+    ],
+    "introspections": [
+      {
+        "title": "Introspection 17: I Will Continue to Monitor, Measure, and Report",
+        "prompts": [
+          "What metrics am I already tracking that I should continue?"
+        ]
+      },
+      {
+        "title": "Introspection 18: I Will Start to Monitor, Measure, and Report",
+        "prompts": [
+          "What new metrics should I begin tracking?"
+        ]
+      }
+    ],
+    "resources": []
+  },
+  {
+    "id": "creating-value",
+    "name": "Creating Value",
+    "day": 2,
+    "time": "10:45 - 11:30",
+    "fourC": "Cognizance",
+    "coreTopics": [
+      "Value creation strategies",
+      "Innovation and disruption",
+      "Disruptive technologies",
+      "The elevator pitch"
+    ],
+    "articles": [30, 131, 42],
+    "hasContent": true,
+    "description": "\"Influential people are never satisfied with the status quo. They're the ones who constantly ask, 'What if?' and 'Why not?' They're not afraid to challenge conventional wisdom, and they don't disrupt things for the sake of being disruptive; they do it to make things better.\" — Travis Bradberry",
+    "discussionPoints": [
+      "How do you innovate as an individual or a team?",
+      "Innovation is mundane unless it brings disruption",
+      "Disruptive Technologies of the (Near) Future — Genomics, Nanotechnology, and Robotics",
+      "Challenging conventional wisdom with purpose",
+      "The elevator pitch: If there was one thing you would tell your chairman as your most valuable contribution, what would that look like?"
+    ],
+    "introspections": [
+      {
+        "title": "Introspection 19: My Most Valuable Contribution",
+        "prompts": [
+          "If there was one thing you would tell your chairman in the elevator ride as your most valuable contribution to the company (current or past), what would that look like?"
+        ]
+      }
+    ],
+    "resources": []
+  },
+  {
+    "id": "politics",
+    "name": "Politics @ Workplace",
+    "day": 2,
+    "time": "11:30 - 12:00",
+    "fourC": "Cognizance",
+    "coreTopics": [
+      "Workplace dynamics",
+      "Navigating the pecking order",
+      "Navigating complexity with integrity"
+    ],
+    "articles": [44, 121, 122, 129],
+    "hasContent": true,
+    "description": "Workplace politics is a reality of organizational life. This session encourages honest reflection on political dynamics and explores how to move beyond pecking orders toward genuine collaboration.",
+    "discussionPoints": [
+      "How political are we?",
+      "Narrate an incident where you have been a victim of politics",
+      "Understanding the pecking order and why it's time to move beyond it",
+      "Building trust-based teams rather than hierarchy-driven ones"
+    ],
+    "introspections": [
+      {
+        "title": "Introspection 20: My Experience with Politics",
+        "prompts": [
+          "Narrate an incident where you have been a victim of politics — what did you learn?"
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "title": "Why it's time to forget the pecking order at work",
+        "url": "https://www.ted.com/talks/margaret_heffernan_why_it_s_time_to_forget_the_pecking_order_at_work",
+        "source": "TED Talk — Margaret Heffernan"
+      }
+    ]
+  },
+  {
+    "id": "budget",
+    "name": "Budget",
+    "day": 2,
+    "time": "12:00 - 13:30",
+    "fourC": "Cognizance",
+    "coreTopics": [
+      "Financial planning fundamentals",
+      "Op-ex & Cap-ex",
+      "Currencies and exchange rates",
+      "Macro-economic awareness"
+    ],
+    "articles": [],
+    "hasContent": false,
+    "emptyReason": "After deep-reading all 135 Sunday Thoughts articles, none were found with genuine relevance to budgeting and financial planning.",
+    "description": "Understanding budgets is a core leadership competency. This session covers the ABCs of budgeting — from company-level operational and capital expenditures to macro-economic concepts every leader should know.",
+    "discussionPoints": [
+      "What is a budget? Why is it necessary?",
+      "Budget of a Company: Op-ex (Operational Expenditure) & Cap-ex (Capital Expenditure)",
+      "Budget of a Country — the bigger picture",
+      "Role of Currencies: Exchange Rates and their impact on companies, countries, and individuals",
+      "GDP = C + G + I + NX — understanding how economies are measured",
+      "Current Account Deficit and Fiscal Deficit — what they mean for business",
+      "Understanding inflation, interest rates, and monetary policy",
+      "Do I understand my departmental budget?"
+    ],
+    "introspections": [
+      {
+        "title": "Introspection 21: What I Understand About My Budget",
+        "prompts": [
+          "What aspects of my budget do I already understand well?"
+        ]
+      },
+      {
+        "title": "Introspection 22: What I Will Learn About My Budget",
+        "prompts": [
+          "What budgetary aspects will I work to understand better?"
+        ]
+      }
+    ],
+    "resources": []
+  },
+  {
+    "id": "charisma",
+    "name": "Being Charismatic",
+    "day": 2,
+    "time": "14:00 - 14:45",
+    "fourC": "Charisma",
+    "coreTopics": [
+      "Being authentic",
+      "The 5 As of Interaction",
+      "Building presence and trust",
+      "Personal brand"
+    ],
+    "articles": [89, 126],
+    "hasContent": true,
+    "description": "Charisma isn't about being loud — it's about being authentic. This session explores the spectrum of interaction styles, from arrogance to acceptance, and how trust is the most important aspect of leadership.",
+    "discussionPoints": [
+      "8 small signs people use to judge your personality — how you treat waiters, your handshake, your punctuality all send signals",
+      "Being Authentic — The 5 As of Interaction:",
+      "1. Arrogance (Unacceptable)",
+      "2. Assertion",
+      "3. Authentic (Ideal Approach)",
+      "4. Accommodating",
+      "5. Accepting (Unacceptable)",
+      "Being Diplomatic — navigating with finesse",
+      "Finesse: Grooming, Comfort, and Crispness (being succinct)",
+      "Independence vs. Dependence — Knowing what I can do, what I cannot, and what I don't know",
+      "Delegation and Accountability",
+      "The most important aspect: Trust — built through experience, instincts, team, and relationships"
+    ],
+    "introspections": [],
+    "resources": []
+  }
+]
