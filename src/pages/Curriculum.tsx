@@ -1,8 +1,16 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { loadSessions, loadArticles, getFourCColorClass, getFourCTextClass } from '../utils/dataLoader';
+import { getSessionStep, setSessionStep, getProgressStats } from '../utils/progress';
 import type { Session, Article, Introspection, SessionResource } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
+
+const FOUR_C_GRADIENTS: Record<string, string> = {
+  Communication: 'linear-gradient(135deg, #3B82F6, #1D4ED8)',
+  Customer:      'linear-gradient(135deg, #10B981, #047857)',
+  Cognizance:    'linear-gradient(135deg, #8B5CF6, #5B21B6)',
+  Charisma:      'linear-gradient(135deg, #F59E0B, #B45309)',
+};
 
 // === Types for SessionCard progressive reveal ===
 type RevealItem =
@@ -551,6 +559,7 @@ export default function Curriculum() {
   const [filter, setFilter] = useState<string>('All');
   const [expandedSessions, setExpandedSessions] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(true);
+  const [progressStats, setProgressStats] = useState({ startedSessions: 0, sessionPct: 0, readArticles: 0, articlePct: 0 });
 
   useEffect(() => {
     Promise.all([loadSessions(), loadArticles()])
@@ -558,6 +567,7 @@ export default function Curriculum() {
         setSessions(sessionsData);
         setArticles(articlesData);
         setLoading(false);
+        setProgressStats(getProgressStats(sessionsData.map(s => s.id), articlesData.length));
       });
   }, []);
 
@@ -586,28 +596,49 @@ export default function Curriculum() {
 
   const allNonCognizanceSessions = filteredNonCognizance;
 
+  const totalSessions = sessions.filter(s => s.fourC !== 'Cognizance').length;
+
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900 tracking-tight">
+    <div className="min-h-screen bg-gray-50">
+      {/* Page header */}
+      <div className="bg-white border-b border-gray-200 px-6 py-8">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-3xl font-bold text-gray-900 tracking-tight mb-1">
             Leadership Laboratory Curriculum
           </h1>
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-gray-500 mb-6">
             A comprehensive workshop exploring the 4 Cs of Leadership
           </p>
 
+          {/* Overall progress */}
+          <div className="bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 mb-6">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-semibold text-gray-700">Overall curriculum progress</span>
+              <span className="text-sm font-bold text-gray-900 tabular-nums">{progressStats.sessionPct}%</span>
+            </div>
+            <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div
+                className="h-full rounded-full transition-all duration-700"
+                style={{ width: `${progressStats.sessionPct}%`, background: 'linear-gradient(to right, #3B82F6, #8B5CF6)' }}
+              />
+            </div>
+            <p className="text-xs text-gray-400 mt-1.5">
+              {progressStats.startedSessions} of {totalSessions} sessions started
+            </p>
+          </div>
+
+          {/* Filter tabs */}
           <div className="flex flex-wrap gap-2">
             {['All', 'Communication', 'Customer', 'Cognizance', 'Charisma'].map(cat => (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   filter === cat
                     ? cat === 'All'
                       ? 'bg-gray-900 text-white'
                       : `${getFourCColorClass(cat)} text-white`
-                    : 'bg-white text-gray-700 hover:bg-gray-100'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
                 {cat}
@@ -615,15 +646,18 @@ export default function Curriculum() {
             ))}
           </div>
         </div>
+      </div>
 
-        <div className="space-y-4">
-          {allNonCognizanceSessions.filter(s => s.day === 1).map(session => (
+      <div className="px-6 py-8">
+        <div className="max-w-5xl mx-auto space-y-4">
+          {allNonCognizanceSessions.filter(s => s.day === 1).map((session, idx) => (
             <SessionCard
               key={session.id}
               session={session}
               articles={articles}
               isExpanded={expandedSessions.has(session.id)}
               onToggle={() => toggleSession(session.id)}
+              sessionNumber={idx + 1}
             />
           ))}
 
@@ -632,13 +666,14 @@ export default function Curriculum() {
             <CognizanceGridSection sessions={cognizanceSessions} articles={articles} />
           )}
 
-          {allNonCognizanceSessions.filter(s => s.day === 2).map(session => (
+          {allNonCognizanceSessions.filter(s => s.day === 2).map((session, idx) => (
             <SessionCard
               key={session.id}
               session={session}
               articles={articles}
               isExpanded={expandedSessions.has(session.id)}
               onToggle={() => toggleSession(session.id)}
+              sessionNumber={allNonCognizanceSessions.filter(s => s.day === 1).length + idx + 1}
             />
           ))}
         </div>
@@ -653,36 +688,50 @@ function SessionCard({
   articles,
   isExpanded,
   onToggle,
+  sessionNumber,
 }: {
   session: Session;
   articles: Article[];
   isExpanded: boolean;
   onToggle: () => void;
+  sessionNumber: number;
 }) {
-  const [step, setStep] = useState(0);
+  const savedStep = getSessionStep(session.id);
+  const [step, setStep] = useState(savedStep);
   const contentRef = useRef<HTMLDivElement>(null);
   const revealItems = buildRevealItems(session);
   const totalSteps = revealItems.length;
   const allRevealed = step >= totalSteps;
 
   useEffect(() => {
-    if (!isExpanded) setStep(0);
-  }, [isExpanded]);
+    if (!isExpanded) return;
+    // restore saved step on expand
+    setStep(getSessionStep(session.id));
+  }, [isExpanded, session.id]);
 
   const advance = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
-    if (step < totalSteps) setStep(s => s + 1);
-  }, [step, totalSteps]);
+    if (step < totalSteps) {
+      const next = step + 1;
+      setStep(next);
+      setSessionStep(session.id, next, session.name);
+    }
+  }, [step, totalSteps, session.id, session.name]);
 
   const goBack = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
-    if (step > 0) setStep(s => s - 1);
-  }, [step]);
+    if (step > 0) {
+      const prev = step - 1;
+      setStep(prev);
+      setSessionStep(session.id, prev, session.name);
+    }
+  }, [step, session.id, session.name]);
 
   const revealAll = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
     setStep(totalSteps);
-  }, [totalSteps]);
+    setSessionStep(session.id, totalSteps, session.name);
+  }, [totalSteps, session.id, session.name]);
 
   useEffect(() => {
     if (!isExpanded) return;
@@ -927,39 +976,60 @@ function SessionCard({
     }
   };
 
+  const completionPct = totalSteps > 0 ? Math.round((step / totalSteps) * 100) : 0;
+  const isStarted = step > 0;
+
   return (
-    <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+    <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-200 border border-gray-100">
+
+      {/* ── Netflix-style tile header ── */}
       <div
         onClick={onToggle}
-        className="p-6 cursor-pointer hover:bg-gray-50/80 transition-colors"
+        className="relative cursor-pointer group"
+        style={{ background: FOUR_C_GRADIENTS[session.fourC] }}
       >
-        <div className="flex items-start justify-between">
-          <div className="flex-1">
-            <div className="flex items-center gap-3 mb-2">
-              <span className={`px-3 py-1 rounded-full text-sm font-semibold text-white ${getFourCColorClass(session.fourC)} shadow-sm`}>
-                {session.fourC}
-              </span>
-              <span className="inline-flex items-center gap-1 text-xs font-medium text-gray-400">
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                {session.time}
-              </span>
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-3">
-              {session.name}
-            </h3>
-            <div className="flex items-center gap-2 text-sm text-gray-500">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-              <span>{session.articles.length} article{session.articles.length !== 1 ? 's' : ''}</span>
-            </div>
+        {/* session number watermark */}
+        <span className="absolute top-4 right-5 text-5xl font-black text-white/10 select-none leading-none">
+          {String(sessionNumber).padStart(2, '0')}
+        </span>
+
+        <div className="relative px-6 pt-6 pb-5">
+          {/* Category badge + time */}
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-xs font-bold text-white/70 uppercase tracking-widest">
+              {session.fourC}
+            </span>
+            <span className="text-white/40">·</span>
+            <span className="text-xs text-white/60">{session.time}</span>
+            <span className="text-white/40">·</span>
+            <span className="text-xs text-white/60">{session.articles.length} article{session.articles.length !== 1 ? 's' : ''}</span>
           </div>
-          <div className="ml-4">
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isExpanded ? 'bg-gray-100 rotate-180' : 'bg-gray-50'}`}>
-              <svg
-                className="w-5 h-5 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+
+          {/* Session title */}
+          <h3 className="text-xl font-bold text-white leading-snug mb-4 pr-12">
+            {session.name}
+          </h3>
+
+          {/* Progress bar */}
+          <div className="flex items-center gap-3">
+            <div className="flex-1 h-1.5 bg-white/20 rounded-full overflow-hidden">
+              <div
+                className="h-full bg-white/80 rounded-full transition-all duration-500"
+                style={{ width: `${completionPct}%` }}
+              />
+            </div>
+            <span className="text-xs font-bold text-white/70 tabular-nums w-10 text-right">
+              {isStarted ? `${completionPct}%` : 'Start'}
+            </span>
+          </div>
+
+          {/* Status labels */}
+          <div className="flex items-center justify-between mt-2">
+            <span className="text-xs text-white/50">
+              {allRevealed ? '✓ Complete' : isStarted ? `Step ${step} of ${totalSteps}` : 'Not started'}
+            </span>
+            <div className={`w-7 h-7 rounded-full bg-white/15 flex items-center justify-center transition-transform ${isExpanded ? 'rotate-180' : ''}`}>
+              <svg className="w-4 h-4 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </div>
@@ -968,14 +1038,7 @@ function SessionCard({
       </div>
 
       {isExpanded && (
-        <div className="border-t" ref={contentRef}>
-          {/* Progress bar */}
-          <div className="h-1.5 bg-gray-100">
-            <div
-              className={`h-full ${getFourCColorClass(session.fourC)} transition-all duration-500 ease-out rounded-r-full`}
-              style={{ width: `${totalSteps > 0 ? (step / totalSteps) * 100 : 0}%` }}
-            />
-          </div>
+        <div ref={contentRef}>
 
           {/* Content area */}
           <div

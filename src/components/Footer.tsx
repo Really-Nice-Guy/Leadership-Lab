@@ -44,13 +44,13 @@ export default function Footer() {
               {/* Total */}
               <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
                 <div className="text-2xl font-bold text-white">{totalArticles}</div>
-                <div className="text-xs text-gray-400 mt-1">Total Articles</div>
+                <div className="text-xs text-gray-300 mt-1">Total Articles</div>
               </div>
 
               {/* In Curriculum */}
               <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
                 <div className="text-2xl font-bold text-communication">{inCurriculum}</div>
-                <div className="text-xs text-gray-400 mt-1">In Curriculum</div>
+                <div className="text-xs text-gray-300 mt-1">In Curriculum</div>
               </div>
 
               {/* By Topic */}
@@ -62,7 +62,7 @@ export default function Footer() {
                   <div className={`text-2xl font-bold ${meta.color}`}>
                     {topicCounts[topic] || 0}
                   </div>
-                  <div className="text-xs text-gray-400 mt-1 flex items-center justify-center gap-1">
+                  <div className="text-xs text-gray-300 mt-1 flex items-center justify-center gap-1">
                     <span>{meta.icon}</span>
                     <span>{topic}</span>
                   </div>
@@ -75,7 +75,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-3 tracking-tight">Leadership Laboratory</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-300 text-sm leading-relaxed">
               A comprehensive workshop exploring the 4 Cs of Leadership,
               enriched with deep-read verified insights from Sunday Thoughts.
             </p>
@@ -83,7 +83,7 @@ export default function Footer() {
 
           <div>
             <h4 className="font-semibold mb-3">The 4 Cs</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
+            <ul className="space-y-2 text-sm text-gray-300">
               <li className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-communication" />
                 Communication
@@ -105,7 +105,7 @@ export default function Footer() {
 
           <div>
             <h4 className="font-semibold mb-3">Resources</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
+            <ul className="space-y-2 text-sm text-gray-300">
               <li>13 Workshop Sessions</li>
               <li>{inCurriculum || 28} Curated Articles</li>
               <li>Intensive Workshop Format</li>

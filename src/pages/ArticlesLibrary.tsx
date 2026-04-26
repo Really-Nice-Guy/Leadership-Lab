@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { loadArticles, loadSessions, getFourCColorClass, getFourCTextClass, getFourCLightBgClass } from '../utils/dataLoader';
+import { isArticleRead } from '../utils/progress';
 import type { Article, Session } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 
@@ -36,36 +37,56 @@ export default function ArticlesLibrary() {
     return <LoadingSpinner message="Loading articles..." />;
   }
 
+  const readCount = articles.filter(a => isArticleRead(a.number)).length;
+
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900 tracking-tight">
+    <div className="min-h-screen bg-gray-50">
+      {/* Page header */}
+      <div className="bg-white border-b border-gray-200 px-6 py-8">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-3xl font-bold text-gray-900 tracking-tight mb-1">
             Sunday Thoughts Article Library
           </h1>
-          <div className="mb-6">
-            <input
-              type="text"
-              placeholder="Search articles..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 md:w-96 transition-colors"
+          <p className="text-gray-500 mb-5">
+            {articles.length} curated articles — {readCount} read
+          </p>
+
+          {/* Reading progress bar */}
+          <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden mb-6 max-w-xs">
+            <div
+              className="h-full rounded-full transition-all duration-700"
+              style={{
+                width: articles.length ? `${Math.round((readCount / articles.length) * 100)}%` : '0%',
+                background: 'linear-gradient(to right, #10B981, #F59E0B)',
+              }}
             />
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 mb-4">
+          {/* Search */}
+          <div className="mb-5">
+            <input
+              type="text"
+              placeholder="Search articles…"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full sm:w-80 px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 text-sm transition-colors bg-gray-50 focus:bg-white"
+            />
+          </div>
+
+          {/* Filters */}
+          <div className="flex flex-wrap gap-4">
             <div className="flex flex-wrap gap-2 items-center">
-              <span className="text-sm font-semibold text-gray-400 uppercase tracking-wide">Category</span>
+              <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Category</span>
               {['All', 'Communication', 'Customer', 'Cognizance', 'Charisma'].map(cat => (
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
                     filter === cat
                       ? cat === 'All'
                         ? 'bg-gray-900 text-white'
                         : `${getFourCColorClass(cat)} text-white`
-                      : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-100'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
                   {cat}
@@ -74,15 +95,15 @@ export default function ArticlesLibrary() {
             </div>
 
             <div className="flex flex-wrap gap-2 items-center">
-              <span className="text-sm font-semibold text-gray-400 uppercase tracking-wide">Status</span>
+              <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Status</span>
               {['All', 'In Curriculum', 'Not in Curriculum'].map(status => (
                 <button
                   key={status}
                   onClick={() => setCurriculumFilter(status)}
-                  className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
                     curriculumFilter === status
                       ? 'bg-gray-900 text-white'
-                      : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-100'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
                   {status}
@@ -91,24 +112,27 @@ export default function ArticlesLibrary() {
             </div>
           </div>
 
-          <div className="mb-4">
-            <p className="text-sm text-gray-500">
-              Showing {filteredArticles.length} of {articles.length} articles
-            </p>
-          </div>
+          <p className="text-xs text-gray-400 mt-3">
+            Showing {filteredArticles.length} of {articles.length} articles
+          </p>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredArticles.map(article => (
-            <ArticleCard key={article.number} article={article} sessions={sessions} />
-          ))}
+      {/* Article grid */}
+      <div className="px-6 py-8">
+        <div className="max-w-5xl mx-auto">
+          {filteredArticles.length === 0 ? (
+            <div className="text-center py-16">
+              <p className="text-xl text-gray-400">No articles found matching your criteria.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {filteredArticles.map(article => (
+                <ArticleCard key={article.number} article={article} sessions={sessions} />
+              ))}
+            </div>
+          )}
         </div>
-
-        {filteredArticles.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-xl text-gray-500">No articles found matching your criteria.</p>
-          </div>
-        )}
       </div>
     </div>
   );
@@ -119,14 +143,14 @@ function formatDate(dateString: string): string {
   if (parts.length >= 2) {
     const month = parts[1];
     const year = parts[2] || new Date().getFullYear().toString();
-    const yearShort = year.slice(-2);
-    return `${month} '${yearShort}`;
+    return `${month} '${year.slice(-2)}`;
   }
   return dateString;
 }
 
 function ArticleCard({ article, sessions }: { article: Article; sessions: Session[] }) {
   const inCurriculum = article.sessions.length > 0;
+  const read = isArticleRead(article.number);
 
   const sessionToFourC = new Map<string, string>();
   sessions.forEach(session => {
@@ -137,62 +161,76 @@ function ArticleCard({ article, sessions }: { article: Article; sessions: Sessio
     new Set(
       article.sessions
         .map(sessionId => {
-          const sessionIdLower = sessionId.toLowerCase();
-          return sessionToFourC.get(sessionIdLower) ||
-                 (['Communication', 'Customer', 'Cognizance', 'Charisma'].includes(sessionId) ? sessionId : null);
+          const lower = sessionId.toLowerCase();
+          return sessionToFourC.get(lower) ||
+            (['Communication', 'Customer', 'Cognizance', 'Charisma'].includes(sessionId) ? sessionId : null);
         })
         .filter((cat): cat is string => cat !== null)
     )
   );
 
-  const formattedDate = formatDate(article.date);
-
   return (
     <Link
       to={`/article/${article.number}`}
-      className="group bg-white rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 p-6 block border border-gray-200"
+      className="group bg-white rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col border border-gray-100 overflow-hidden"
     >
-      <div className="flex items-baseline gap-3 mb-3">
-        <span className="text-gray-400 text-sm font-mono font-medium flex-shrink-0">
-          #{article.number}
-        </span>
-        <div className="flex-1 flex items-baseline gap-2">
-          <h3 className="text-lg font-semibold text-gray-900 line-clamp-2 group-hover:text-gray-700 flex-1">
-            {article.title}
-          </h3>
-          <span className="px-2 py-0.5 bg-gray-50 text-gray-500 rounded text-xs font-medium whitespace-nowrap flex-shrink-0 border border-gray-200">
-            {formattedDate}
-          </span>
-        </div>
-      </div>
+      {/* Top accent stripe */}
+      <div
+        className="h-1 w-full"
+        style={{
+          background: fourCCategories.length > 0
+            ? ({ Communication: '#3B82F6', Customer: '#10B981', Cognizance: '#8B5CF6', Charisma: '#F59E0B' } as Record<string, string>)[fourCCategories[0]] ?? '#E5E7EB'
+            : '#E5E7EB',
+        }}
+      />
 
-      <div className="flex flex-wrap gap-2">
-        {article.topics.slice(0, 3).map((topic, idx) => (
-          <span
-            key={idx}
-            className="px-2 py-0.5 bg-gray-100 rounded text-xs text-gray-600 font-medium"
-          >
-            {topic}
-          </span>
-        ))}
-        {article.topics.length > 3 && (
-          <span className="px-2 py-0.5 bg-gray-100 rounded text-xs text-gray-600">
-            +{article.topics.length - 3}
-          </span>
-        )}
-        {fourCCategories.map((fourC, idx) => (
-          <span
-            key={idx}
-            className={`px-2 py-0.5 rounded text-xs font-semibold ${getFourCLightBgClass(fourC)} ${getFourCTextClass(fourC)}`}
-          >
-            {fourC}
-          </span>
-        ))}
-        {inCurriculum && (
-          <span className="px-2 py-0.5 bg-gray-900 text-white rounded text-xs font-semibold">
-            In Curriculum
-          </span>
-        )}
+      <div className="p-5 flex-1 flex flex-col">
+        {/* Number + date */}
+        <div className="flex items-center justify-between mb-3">
+          <span className="text-xs font-mono font-bold text-gray-400">#{article.number}</span>
+          <div className="flex items-center gap-2">
+            {read && (
+              <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
+                ✓ Read
+              </span>
+            )}
+            <span className="text-xs text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full border border-gray-100">
+              {formatDate(article.date)}
+            </span>
+          </div>
+        </div>
+
+        {/* Title */}
+        <h3 className="text-base font-semibold text-gray-900 line-clamp-3 group-hover:text-gray-700 transition-colors leading-snug flex-1 mb-3">
+          {article.title}
+        </h3>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-1.5 mt-auto">
+          {article.topics.slice(0, 2).map((topic, idx) => (
+            <span key={idx} className="px-2 py-0.5 bg-gray-100 rounded-full text-xs text-gray-500 font-medium">
+              {topic}
+            </span>
+          ))}
+          {article.topics.length > 2 && (
+            <span className="px-2 py-0.5 bg-gray-100 rounded-full text-xs text-gray-400">
+              +{article.topics.length - 2}
+            </span>
+          )}
+          {fourCCategories.map((fourC, idx) => (
+            <span
+              key={idx}
+              className={`px-2 py-0.5 rounded-full text-xs font-bold ${getFourCLightBgClass(fourC)} ${getFourCTextClass(fourC)}`}
+            >
+              {fourC}
+            </span>
+          ))}
+          {inCurriculum && (
+            <span className="px-2 py-0.5 bg-gray-900 text-white rounded-full text-xs font-semibold">
+              In Curriculum
+            </span>
+          )}
+        </div>
       </div>
     </Link>
   );

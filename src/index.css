@@ -41,4 +41,16 @@
   .checkerboard:hover {
     background-color: #e5e5e5;
   }
+
+  /* Smooth sidebar transition on desktop */
+  @media (min-width: 768px) {
+    aside {
+      transition: none;
+    }
+  }
+
+  /* Better prose line-height for article content */
+  .prose p {
+    line-height: 1.8;
+  }
 }
