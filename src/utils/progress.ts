@@ -44,6 +44,21 @@ export function getLastVisited(): ProgressStore['last'] {
   return load().last;
 }
 
+export function resetProgress(): void {
+  try { localStorage.removeItem(KEY); } catch { /* ignore */ }
+}
+
+export function visitCognizanceCluster(cluster: string, label: string): void {
+  const p = load();
+  p.sessions[`cog:${cluster}`] = 1;
+  p.last = { type: 'session', id: cluster, name: label };
+  save(p);
+}
+
+export function isCognizanceClusterVisited(cluster: string): boolean {
+  return (load().sessions[`cog:${cluster}`] || 0) > 0;
+}
+
 export function getProgressStats(allSessionIds: string[], totalArticles: number) {
   const p = load();
   const started = allSessionIds.filter(id => (p.sessions[id] || 0) > 0).length;

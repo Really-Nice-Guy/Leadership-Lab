@@ -1,9 +1,41 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { loadSessions, loadArticles, getFourCColorClass, getFourCTextClass } from '../utils/dataLoader';
-import { getSessionStep, setSessionStep, getProgressStats } from '../utils/progress';
+import { getSessionStep, setSessionStep, getProgressStats, resetProgress, visitCognizanceCluster, isCognizanceClusterVisited } from '../utils/progress';
 import type { Session, Article, Introspection, SessionResource } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
+
+// Cluster display labels & hex colours for the map
+const CLUSTER_LABELS: Record<string, string> = {
+  'culture':          'Culture',
+  'goals-ack':        'Goals & ACK Model',
+  'colleagues-env':   'Colleagues & Environment',
+  'next6':            'The Next 6',
+  'budget':           'Budget',
+  'politics':         'Politics',
+  'network':          'Network',
+};
+
+const CLUSTER_HEX: Record<string, string> = {
+  'culture':          '#0D9488',
+  'goals-ack':        '#2563EB',
+  'colleagues-env':   '#4F46E5',
+  'next6':            '#E11D48',
+  'budget':           '#D97706',
+  'politics':         '#1F2937',
+  'network':          '#EA580C',
+};
+
+const FOUR_C_META: Record<string, { hex: string; light: string; text: string }> = {
+  Communication: { hex: '#3B82F6', light: '#EFF6FF', text: '#1D4ED8' },
+  Customer:      { hex: '#10B981', light: '#ECFDF5', text: '#047857' },
+  Cognizance:    { hex: '#8B5CF6', light: '#F5F3FF', text: '#5B21B6' },
+  Charisma:      { hex: '#F59E0B', light: '#FFFBEB', text: '#B45309' },
+};
+
+const FOUR_C_EMOJI: Record<string, string> = {
+  Communication: '💬', Customer: '🎯', Cognizance: '🧠', Charisma: '✨',
+};
 
 const FOUR_C_GRADIENTS: Record<string, string> = {
   Communication: 'linear-gradient(135deg, #3B82F6, #1D4ED8)',
@@ -370,6 +402,9 @@ function CognizanceGridSection({ sessions, articles }: { sessions: Session[]; ar
 
   const openSection = (section: CognizanceSection) => {
     setActiveSection(section);
+    if (section !== 'grid') {
+      visitCognizanceCluster(section, CLUSTER_LABELS[section] ?? section);
+    }
     setTimeout(() => containerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
   };
 
@@ -552,6 +587,238 @@ function CognizanceGridSection({ sessions, articles }: { sessions: Session[]; ar
   );
 }
 
+// === Reset Confirmation Modal ===
+function ResetModal({ onConfirm, onCancel }: { onConfirm: () => void; onCancel: () => void }) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={onCancel}>
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div
+        className="relative bg-white rounded-2xl shadow-2xl max-w-sm w-full p-7"
+        onClick={e => e.stopPropagation()}
+      >
+        <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-4">
+          <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+        </div>
+        <h3 className="text-lg font-bold text-gray-900 text-center mb-2">Reset All Progress?</h3>
+        <p className="text-sm text-gray-500 text-center leading-relaxed mb-7">
+          This will permanently clear all session steps, article read history, Cognizance cluster visits, and your "Continue" card. <strong className="text-gray-700">This cannot be undone.</strong>
+        </p>
+        <div className="flex gap-3">
+          <button
+            onClick={onCancel}
+            className="flex-1 px-4 py-2.5 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-50 transition-colors text-sm"
+          >
+            Cancel
+          </button>
+          <button
+            onClick={onConfirm}
+            className="flex-1 px-4 py-2.5 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-xl transition-colors text-sm shadow-sm"
+          >
+            Yes, Reset
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// === Curriculum Map ===
+function CurriculumMap({
+  sessions,
+  onReset,
+}: {
+  sessions: Session[];
+  onReset: () => void;
+}) {
+  const [showModal, setShowModal] = useState(false);
+  const [, forceRefresh] = useState(0);
+
+  const sessionsByCategory = (cat: string) =>
+    sessions.filter(s => s.fourC === cat && s.fourC !== 'Cognizance');
+
+  const getStatus = (session: Session) => {
+    const total = buildRevealItems(session).length;
+    const current = getSessionStep(session.id);
+    return {
+      total,
+      current,
+      pct: total > 0 ? Math.round((current / total) * 100) : 0,
+      started: current > 0,
+      complete: total > 0 && current >= total,
+    };
+  };
+
+  const handleConfirmedReset = () => {
+    resetProgress();
+    setShowModal(false);
+    forceRefresh(n => n + 1);
+    onReset();
+  };
+
+  const visitedClusters = Object.keys(CLUSTER_LABELS).filter(k => isCognizanceClusterVisited(k)).length;
+
+  return (
+    <>
+      <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+        {/* Header */}
+        <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+          <div className="flex items-center gap-2.5">
+            <span className="text-xl">🗺️</span>
+            <div>
+              <h2 className="text-base font-bold text-gray-900 leading-tight">Curriculum Map</h2>
+              <p className="text-xs text-gray-400">Visual overview of everything covered</p>
+            </div>
+          </div>
+          <button
+            onClick={() => setShowModal(true)}
+            className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-red-500 hover:text-white hover:bg-red-500 border border-red-200 hover:border-red-500 rounded-lg transition-all font-medium"
+          >
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+            Reset Progress
+          </button>
+        </div>
+
+        <div className="p-6 space-y-7">
+
+          {/* Communication, Customer, Charisma rows */}
+          {(['Communication', 'Customer', 'Charisma'] as const).map(cat => {
+            const catSessions = sessionsByCategory(cat);
+            const { hex, light, text } = FOUR_C_META[cat];
+            const startedCount = catSessions.filter(s => getSessionStep(s.id) > 0).length;
+
+            return (
+              <div key={cat}>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <span>{FOUR_C_EMOJI[cat]}</span>
+                    <span className="text-sm font-bold" style={{ color: text }}>{cat}</span>
+                    <span className="text-xs text-gray-400 font-medium">
+                      · {catSessions.length} session{catSessions.length !== 1 ? 's' : ''}
+                    </span>
+                  </div>
+                  <span className="text-xs text-gray-400">
+                    {startedCount}/{catSessions.length} started
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5">
+                  {catSessions.map(session => {
+                    const { pct, started, complete } = getStatus(session);
+                    return (
+                      <div
+                        key={session.id}
+                        className="relative rounded-xl p-3 border transition-all"
+                        style={
+                          started
+                            ? { background: light, borderColor: hex + '50' }
+                            : { background: '#F9FAFB', borderColor: '#E5E7EB' }
+                        }
+                      >
+                        {complete && (
+                          <span
+                            className="absolute top-2 right-2 text-xs font-bold"
+                            style={{ color: hex }}
+                          >✓</span>
+                        )}
+                        <p
+                          className="text-xs font-semibold leading-snug line-clamp-2 mb-2.5 pr-4"
+                          style={{ color: started ? text : '#9CA3AF' }}
+                        >
+                          {session.name}
+                        </p>
+                        <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
+                          <div
+                            className="h-full rounded-full transition-all duration-500"
+                            style={{ width: `${pct}%`, backgroundColor: hex }}
+                          />
+                        </div>
+                        <p className="text-[10px] mt-1 font-medium" style={{ color: started ? hex : '#D1D5DB' }}>
+                          {started ? `${pct}% complete` : 'Not started'}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+
+          {/* Cognizance — full 5×3 grid of all 15 topics */}
+          <div>
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center gap-2">
+                <span>{FOUR_C_EMOJI['Cognizance']}</span>
+                <span className="text-sm font-bold text-violet-700">Cognizance</span>
+                <span className="text-xs text-gray-400 font-medium">
+                  · 15 topics across 7 clusters
+                </span>
+              </div>
+              <span className="text-xs text-gray-400">
+                {visitedClusters}/7 clusters visited
+              </span>
+            </div>
+
+            {/* 5×3 topic grid */}
+            <div className="grid grid-cols-5 gap-2 mb-3">
+              {GRID_CELLS.map((cell, idx) => {
+                const visited = isCognizanceClusterVisited(cell.cluster);
+                const hex = CLUSTER_HEX[cell.cluster];
+                return (
+                  <div
+                    key={idx}
+                    className="rounded-xl py-3 px-2 text-center text-xs font-semibold transition-all border"
+                    style={
+                      visited
+                        ? { backgroundColor: hex, borderColor: 'transparent', color: '#fff' }
+                        : { backgroundColor: '#F9FAFB', borderColor: '#E5E7EB', color: '#9CA3AF' }
+                    }
+                  >
+                    {visited && (
+                      <div className="text-[10px] opacity-60 mb-0.5">✓</div>
+                    )}
+                    <div className="leading-tight">{cell.label}</div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Cluster legend */}
+            <div className="flex flex-wrap gap-1.5">
+              {Object.entries(CLUSTER_LABELS).map(([key, label]) => {
+                const visited = isCognizanceClusterVisited(key);
+                return (
+                  <span
+                    key={key}
+                    className="inline-flex items-center gap-1 text-[10px] font-semibold px-2.5 py-1 rounded-full border transition-all"
+                    style={
+                      visited
+                        ? { backgroundColor: CLUSTER_HEX[key], borderColor: 'transparent', color: '#fff' }
+                        : { backgroundColor: '#F9FAFB', borderColor: '#E5E7EB', color: '#9CA3AF' }
+                    }
+                  >
+                    {visited ? '✓ ' : '○ '}{label}
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {showModal && (
+        <ResetModal
+          onConfirm={handleConfirmedReset}
+          onCancel={() => setShowModal(false)}
+        />
+      )}
+    </>
+  );
+}
+
 // === Main Curriculum Component ===
 export default function Curriculum() {
   const [sessions, setSessions] = useState<Session[]>([]);
@@ -560,6 +827,7 @@ export default function Curriculum() {
   const [expandedSessions, setExpandedSessions] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(true);
   const [progressStats, setProgressStats] = useState({ startedSessions: 0, sessionPct: 0, readArticles: 0, articlePct: 0 });
+  const [mapKey, setMapKey] = useState(0);
 
   useEffect(() => {
     Promise.all([loadSessions(), loadArticles()])
@@ -570,6 +838,12 @@ export default function Curriculum() {
         setProgressStats(getProgressStats(sessionsData.map(s => s.id), articlesData.length));
       });
   }, []);
+
+  const handleReset = () => {
+    setProgressStats({ startedSessions: 0, sessionPct: 0, readArticles: 0, articlePct: 0 });
+    setExpandedSessions(new Set());
+    setMapKey(k => k + 1);
+  };
 
   const toggleSession = (sessionId: string) => {
     const newExpanded = new Set(expandedSessions);
@@ -628,7 +902,7 @@ export default function Curriculum() {
           </div>
 
           {/* Filter tabs */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mb-0">
             {['All', 'Communication', 'Customer', 'Cognizance', 'Charisma'].map(cat => (
               <button
                 key={cat}
@@ -648,7 +922,18 @@ export default function Curriculum() {
         </div>
       </div>
 
-      <div className="px-6 py-8">
+      {/* Curriculum Map */}
+      <div className="px-6 pt-8 pb-2">
+        <div className="max-w-5xl mx-auto">
+          <CurriculumMap
+            key={mapKey}
+            sessions={sessions}
+            onReset={handleReset}
+          />
+        </div>
+      </div>
+
+      <div className="px-6 py-6">
         <div className="max-w-5xl mx-auto space-y-4">
           {allNonCognizanceSessions.filter(s => s.day === 1).map((session, idx) => (
             <SessionCard
