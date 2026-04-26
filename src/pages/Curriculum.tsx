@@ -389,7 +389,7 @@ function BackToGridButton({ onClick }: { onClick: () => void }) {
 }
 
 // === Cognizance Grid Section ===
-function CognizanceGridSection({ sessions, articles }: { sessions: Session[]; articles: Article[] }) {
+function CognizanceGridSection({ sessions, articles, onClusterVisit }: { sessions: Session[]; articles: Article[]; onClusterVisit: () => void }) {
   const [activeSection, setActiveSection] = useState<CognizanceSection>('grid');
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -404,6 +404,7 @@ function CognizanceGridSection({ sessions, articles }: { sessions: Session[]; ar
     setActiveSection(section);
     if (section !== 'grid') {
       visitCognizanceCluster(section, CLUSTER_LABELS[section] ?? section);
+      onClusterVisit();
     }
     setTimeout(() => containerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
   };
@@ -948,7 +949,7 @@ export default function Curriculum() {
 
           {/* Cognition Grid */}
           {showCognizanceGrid && cognizanceSessions.length > 0 && (
-            <CognizanceGridSection sessions={cognizanceSessions} articles={articles} />
+            <CognizanceGridSection sessions={cognizanceSessions} articles={articles} onClusterVisit={() => setMapKey(k => k + 1)} />
           )}
 
           {allNonCognizanceSessions.filter(s => s.day === 2).map((session, idx) => (
