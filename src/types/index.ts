@@ -1,12 +1,8 @@
 export interface Article {
   number: number;
-  title: string;
   date: string;
-  topics: string[];
-  sessions: string[];
-  relevance: Record<string, string>;
-  content?: string;
-  inCurriculum?: boolean;
+  title: string;
+  content: string;
 }
 
 export interface SessionResource {

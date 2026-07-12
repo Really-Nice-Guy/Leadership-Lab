@@ -1,8 +1,8 @@
 import type { Article, Session, Mapping } from '../types';
+import articlesData from '../data/articles.json';
 
 export async function loadArticles(): Promise<Article[]> {
-  const response = await fetch('/data/articles.json');
-  return response.json();
+  return articlesData as Article[];
 }
 
 export async function loadSessions(): Promise<Session[]> {

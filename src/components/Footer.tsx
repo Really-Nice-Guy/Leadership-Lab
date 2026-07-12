@@ -2,13 +2,6 @@ import { useEffect, useState } from 'react';
 import { loadArticles } from '../utils/dataLoader';
 import type { Article } from '../types';
 
-const TOPIC_META: Record<string, { icon: string; color: string; bg: string }> = {
-  'Thought Leadership': { icon: '💡', color: 'text-amber-400', bg: 'bg-amber-400/10' },
-  'Technology':         { icon: '⚙️', color: 'text-cyan-400',  bg: 'bg-cyan-400/10' },
-  'Geopolitics':        { icon: '🌍', color: 'text-emerald-400', bg: 'bg-emerald-400/10' },
-  'Macroeconomics':     { icon: '📊', color: 'text-violet-400', bg: 'bg-violet-400/10' },
-};
-
 export default function Footer() {
   const [articles, setArticles] = useState<Article[]>([]);
 
@@ -16,16 +9,7 @@ export default function Footer() {
     loadArticles().then(setArticles).catch(() => {});
   }, []);
 
-  const topicCounts: Record<string, number> = {};
-  articles.forEach(a => {
-    a.topics.forEach(t => {
-      const topic = t.trim();
-      topicCounts[topic] = (topicCounts[topic] || 0) + 1;
-    });
-  });
-
   const totalArticles = articles.length;
-  const inCurriculum = articles.filter(a => a.inCurriculum).length;
 
   return (
     <footer className="bg-gray-900 text-white py-12 px-4">
@@ -40,34 +24,11 @@ export default function Footer() {
               </h4>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-              {/* Total */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xs">
               <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
                 <div className="text-2xl font-bold text-white">{totalArticles}</div>
                 <div className="text-xs text-gray-300 mt-1">Total Articles</div>
               </div>
-
-              {/* In Curriculum */}
-              <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
-                <div className="text-2xl font-bold text-communication">{inCurriculum}</div>
-                <div className="text-xs text-gray-300 mt-1">In Curriculum</div>
-              </div>
-
-              {/* By Topic */}
-              {Object.entries(TOPIC_META).map(([topic, meta]) => (
-                <div
-                  key={topic}
-                  className={`${meta.bg} border border-white/10 rounded-xl p-4 text-center`}
-                >
-                  <div className={`text-2xl font-bold ${meta.color}`}>
-                    {topicCounts[topic] || 0}
-                  </div>
-                  <div className="text-xs text-gray-300 mt-1 flex items-center justify-center gap-1">
-                    <span>{meta.icon}</span>
-                    <span>{topic}</span>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         )}
@@ -107,7 +68,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-3">Resources</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>13 Workshop Sessions</li>
-              <li>{inCurriculum || 28} Curated Articles</li>
+              <li>{totalArticles || 145} Curated Articles</li>
               <li>Intensive Workshop Format</li>
               <li>Evidence-Based Content</li>
             </ul>
