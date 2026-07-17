@@ -3,6 +3,10 @@ export interface Article {
   date: string;
   title: string;
   content: string;
+  category?: 'Technology/AI' | 'Macroeconomics' | 'Geopolitics' | 'Thought Leadership';
+  fourC?: 'Communication' | 'Customer' | 'Cognizance' | 'Charisma' | null;
+  sessions?: string[];
+  shelfLife?: 'dated' | 'ageless';
 }
 
 export interface SessionResource {

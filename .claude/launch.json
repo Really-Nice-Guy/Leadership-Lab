@@ -2,9 +2,9 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "dev",
-      "runtimeExecutable": "bash",
-      "runtimeArgs": ["-c", "source ~/.nvm/nvm.sh && nvm use 22.14.0 && npm run dev -- --host"],
+      "name": "leadership-lab",
+      "runtimeExecutable": "/Users/himanshushah/.nvm/versions/node/v22.22.0/bin/node",
+      "runtimeArgs": ["./node_modules/vite/bin/vite.js"],
       "port": 5173
     }
   ]
