@@ -1,0 +1,1265 @@
+[
+ {
+  "number": 1,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "culture"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 2,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 3,
+  "category": "Thought Leadership",
+  "fourC": "Communication",
+  "sessions": [
+   "communication"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 4,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 5,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 6,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "colleagues"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 7,
+  "category": "Thought Leadership",
+  "fourC": "Customer",
+  "sessions": [
+   "customer"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 8,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 9,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 10,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 11,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "competition"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 12,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "competition"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 13,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 14,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 15,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 16,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "competition"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 17,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "creating-value"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 18,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 19,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 20,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 21,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "competition"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 22,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 23,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 24,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 25,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 26,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 27,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 28,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 29,
+  "category": "Geopolitics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 30,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "creating-value"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 31,
+  "category": "Macroeconomics",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 32,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 33,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 34,
+  "category": "Geopolitics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 35,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 36,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 37,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "competition"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 38,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 39,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 40,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "colleagues"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 41,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "creating-value"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 42,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "creating-value"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 43,
+  "category": "Geopolitics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 44,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "competition"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 45,
+  "category": "Geopolitics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 46,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 47,
+  "category": "Macroeconomics",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 48,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 49,
+  "category": "Geopolitics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 50,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "creating-value"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 51,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "culture"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 52,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "competition"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 53,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 54,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 55,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 56,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "metrics"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 57,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 58,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 59,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 60,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "goals"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 61,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 62,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 63,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 64,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 65,
+  "category": "Macroeconomics",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 66,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 67,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 68,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 69,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 70,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "creating-value"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 71,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 72,
+  "category": "Thought Leadership",
+  "fourC": "Communication",
+  "sessions": [
+   "communication"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 73,
+  "category": "Geopolitics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 74,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 75,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 76,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 77,
+  "category": "Thought Leadership",
+  "fourC": "Communication",
+  "sessions": [
+   "communication"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 78,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 79,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 80,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 81,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "budget"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 82,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 83,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 84,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "competition"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 85,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 86,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 87,
+  "category": "Thought Leadership",
+  "fourC": "Charisma",
+  "sessions": [
+   "charisma"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 88,
+  "category": "Thought Leadership",
+  "fourC": "Charisma",
+  "sessions": [
+   "charisma"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 89,
+  "category": "Technology/AI",
+  "fourC": "Charisma",
+  "sessions": [
+   "charisma"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 90,
+  "category": "Geopolitics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 91,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 92,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 93,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 94,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 95,
+  "category": "Technology/AI",
+  "fourC": "Communication",
+  "sessions": [
+   "communication"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 96,
+  "category": "Geopolitics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 97,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 98,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 99,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "colleagues"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 100,
+  "category": "Geopolitics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 101,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 102,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 103,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 104,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 105,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 106,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 107,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 108,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 109,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 110,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 111,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 112,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 113,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 114,
+  "category": "Thought Leadership",
+  "fourC": "Communication",
+  "sessions": [
+   "communication"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 115,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "metrics"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 116,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 117,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 118,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "culture"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 119,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 120,
+  "category": "Thought Leadership",
+  "fourC": "Communication",
+  "sessions": [
+   "communication"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 121,
+  "category": "Thought Leadership",
+  "fourC": "Communication",
+  "sessions": [
+   "communication"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 122,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "politics"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 123,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "goals"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 124,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "colleagues"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 125,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 126,
+  "category": "Thought Leadership",
+  "fourC": "Charisma",
+  "sessions": [
+   "charisma"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 127,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 128,
+  "category": "Technology/AI",
+  "fourC": null,
+  "sessions": [],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 129,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "politics"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 130,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 131,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "creating-value"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 132,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 133,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 134,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 135,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "goals"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 136,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "goals"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 137,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 138,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 139,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 140,
+  "category": "Macroeconomics",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 141,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 142,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ },
+ {
+  "number": 143,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 144,
+  "category": "Technology/AI",
+  "fourC": "Cognizance",
+  "sessions": [
+   "environment"
+  ],
+  "shelfLife": "dated"
+ },
+ {
+  "number": 145,
+  "category": "Thought Leadership",
+  "fourC": "Cognizance",
+  "sessions": [
+   "self-awareness"
+  ],
+  "shelfLife": "ageless"
+ }
+]
