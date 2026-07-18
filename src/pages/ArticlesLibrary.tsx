@@ -1,9 +1,9 @@
 import { useState, useEffect, useMemo } from 'react';
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { loadArticles } from '../utils/dataLoader';
+import { loadArticles, loadSessions } from '../utils/dataLoader';
 import { isArticleRead } from '../utils/progress';
-import type { Article } from '../types';
+import type { Article, Session } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 const CS = ['Communication', 'Customer', 'Cognizance', 'Charisma'] as const;
@@ -19,18 +19,39 @@ const C_STYLE: Record<string, { stripe: string; chipActive: string; dot: string 
 
 export default function ArticlesLibrary() {
   const [articles, setArticles] = useState<Article[]>([]);
+  const [sessions, setSessions] = useState<Session[]>([]);
   const [search, setSearch] = useState('');
   const [cs, setCs] = useState<string[]>([]);
+  const [sess, setSess] = useState<string[]>([]);        // selected session ids (sub-sections)
   const [cats, setCats] = useState<string[]>([]);
   const [shelf, setShelf] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    loadArticles().then(data => {
-      setArticles(data.slice().sort((a, b) => b.number - a.number)); // newest first
+    Promise.all([loadArticles(), loadSessions()]).then(([arts, sessData]) => {
+      setArticles(arts.slice().sort((a, b) => b.number - a.number)); // newest first
+      setSessions(sessData);
       setLoading(false);
     });
   }, []);
+
+  // session id -> { name, fourC }
+  const sessMeta = useMemo(() => {
+    const m: Record<string, { name: string; fourC: string }> = {};
+    sessions.forEach(s => { m[s.id] = { name: s.name, fourC: s.fourC }; });
+    return m;
+  }, [sessions]);
+
+  // Sub-session chips to show = sessions belonging to the selected pillars.
+  const visibleSessions = useMemo(
+    () => sessions.filter(s => cs.includes(s.fourC)),
+    [sessions, cs]
+  );
+
+  // If a pillar is deselected, drop any of its sessions from the active filter.
+  useEffect(() => {
+    setSess(prev => prev.filter(id => sessMeta[id] && cs.includes(sessMeta[id].fourC)));
+  }, [cs, sessMeta]);
 
   const toggleIn = (list: string[], set: (v: string[]) => void, v: string) =>
     set(list.includes(v) ? list.filter(x => x !== v) : [...list, v]);
@@ -40,13 +61,14 @@ export default function ArticlesLibrary() {
     return articles.filter(a =>
       (!q || a.title.toLowerCase().includes(q) || a.content?.toLowerCase().includes(q)) &&
       (cs.length === 0 || (!!a.fourC && cs.includes(a.fourC))) &&
+      (sess.length === 0 || (a.sessions ?? []).some(id => sess.includes(id))) &&
       (cats.length === 0 || (!!a.category && cats.includes(a.category))) &&
       (shelf.length === 0 || (!!a.shelfLife && shelf.includes(a.shelfLife)))
     );
-  }, [articles, search, cs, cats, shelf]);
+  }, [articles, search, cs, sess, cats, shelf]);
 
   const count = (pred: (a: Article) => boolean) => articles.filter(pred).length;
-  const anyFilter = cs.length > 0 || cats.length > 0 || shelf.length > 0 || search.length > 0;
+  const anyFilter = cs.length > 0 || sess.length > 0 || cats.length > 0 || shelf.length > 0 || search.length > 0;
 
   if (loading) return <LoadingSpinner message="Loading articles..." />;
 
@@ -85,6 +107,18 @@ export default function ArticlesLibrary() {
               ))}
             </FacetRow>
 
+            {/* Sub-sessions of the selected pillar(s) — this surfaces Cognizance's subsections */}
+            {visibleSessions.length > 0 && (
+              <FacetRow label="Session">
+                {visibleSessions.map(s => (
+                  <Chip key={s.id} active={sess.includes(s.id)} activeClass={C_STYLE[s.fourC].chipActive}
+                        onClick={() => toggleIn(sess, setSess, s.id)}>
+                    {s.name} <span className="opacity-50">{count(a => (a.sessions ?? []).includes(s.id))}</span>
+                  </Chip>
+                ))}
+              </FacetRow>
+            )}
+
             <FacetRow label="Topic">
               {CATS.map(cat => (
                 <Chip key={cat} active={cats.includes(cat)} onClick={() => toggleIn(cats, setCats, cat)}>
@@ -105,7 +139,7 @@ export default function ArticlesLibrary() {
           <div className="flex items-center gap-4 mt-4">
             <p className="text-xs text-gray-400">{filtered.length} of {articles.length} articles</p>
             {anyFilter && (
-              <button onClick={() => { setSearch(''); setCs([]); setCats([]); setShelf([]); }}
+              <button onClick={() => { setSearch(''); setCs([]); setSess([]); setCats([]); setShelf([]); }}
                       className="text-xs text-gray-500 hover:text-gray-900 underline underline-offset-2">
                 Clear all
               </button>
@@ -123,7 +157,7 @@ export default function ArticlesLibrary() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {filtered.map(a => <ArticleCard key={a.number} article={a} />)}
+              {filtered.map(a => <ArticleCard key={a.number} article={a} sessMeta={sessMeta} />)}
             </div>
           )}
         </div>
@@ -169,16 +203,18 @@ function displayTitle(article: Article): string {
   return t;
 }
 
-function ArticleCard({ article }: { article: Article }) {
+function ArticleCard({ article, sessMeta }:
+  { article: Article; sessMeta: Record<string, { name: string; fourC: string }> }) {
   const read = isArticleRead(article.number);
   const stripe = article.fourC ? C_STYLE[article.fourC].stripe : 'bg-gray-200';
+  const sessionNames = (article.sessions ?? []).map(id => sessMeta[id]?.name).filter(Boolean);
 
   return (
     <Link
       to={`/article/${article.number}`}
       className="group bg-white rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col border border-gray-100 overflow-hidden"
     >
-      {/* Colour stripe — now keyed to the article's C */}
+      {/* Colour stripe — keyed to the article's C */}
       <div className={`h-1 w-full ${stripe}`} />
 
       <div className="p-5 flex-1 flex flex-col gap-3">
@@ -204,7 +240,7 @@ function ArticleCard({ article }: { article: Article }) {
           </p>
         )}
 
-        {/* C + topic tags */}
+        {/* C + session + topic tags */}
         <div className="flex flex-wrap items-center gap-1.5 mt-auto pt-1">
           {article.fourC && (
             <span className="inline-flex items-center text-[10px] font-medium text-gray-500">
@@ -212,6 +248,11 @@ function ArticleCard({ article }: { article: Article }) {
               {article.fourC}
             </span>
           )}
+          {sessionNames.slice(0, 1).map(name => (
+            <span key={name} className="text-[10px] text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded-full">
+              {name}
+            </span>
+          ))}
           {article.category && (
             <span className="text-[10px] text-gray-400 bg-gray-50 border border-gray-100 px-1.5 py-0.5 rounded-full">
               {article.category}
