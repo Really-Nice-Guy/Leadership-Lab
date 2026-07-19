@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Curriculum from './pages/Curriculum';
 import ArticlesLibrary from './pages/ArticlesLibrary';
 import ArticleDetail from './pages/ArticleDetail';
+import Review from './pages/Review';
 import './index.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
               <Route path="/curriculum" element={<Curriculum />} />
               <Route path="/articles" element={<ArticlesLibrary />} />
               <Route path="/article/:id" element={<ArticleDetail />} />
+              <Route path="/review" element={<Review />} />
             </Routes>
           </main>
           <Footer />

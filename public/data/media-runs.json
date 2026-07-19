@@ -1,0 +1,138 @@
+[
+ {
+  "date": "2026-07-18",
+  "label": "First run — links verified live",
+  "picks": [
+   {
+    "sessionId": "communication",
+    "title": "How to speak so that people want to listen",
+    "speaker": "Julian Treasure",
+    "source": "TED",
+    "url": "https://www.ted.com/talks/julian_treasure_how_to_speak_so_that_people_want_to_listen",
+    "minutes": 10,
+    "why": "Storytelling and impactful delivery — the seven sins + four cornerstones of speaking.",
+    "status": "pending"
+   },
+   {
+    "sessionId": "customer",
+    "title": "What consumers want",
+    "speaker": "Joseph Pine",
+    "source": "TED",
+    "url": "https://www.ted.com/talks/joseph_pine_what_consumers_want",
+    "minutes": 15,
+    "why": "Customer experience vs. service; the shift from goods to experiences.",
+    "status": "pending"
+   },
+   {
+    "sessionId": "culture",
+    "title": "Building a psychologically safe workplace",
+    "speaker": "Amy Edmondson",
+    "source": "YouTube (TEDxHGSE)",
+    "url": "https://www.youtube.com/watch?v=LhoLuui9gX8",
+    "minutes": 11,
+    "why": "Psychological safety and team dynamics — the heart of culture awareness.",
+    "status": "pending"
+   },
+   {
+    "sessionId": "goals",
+    "title": "Why the secret to success is setting the right goals",
+    "speaker": "John Doerr",
+    "source": "TED",
+    "url": "https://www.ted.com/talks/john_doerr_why_the_secret_to_success_is_setting_the_right_goals",
+    "minutes": 13,
+    "why": "OKRs — setting and aligning meaningful goals.",
+    "status": "pending"
+   },
+   {
+    "sessionId": "colleagues",
+    "title": "Forget the pecking order at work",
+    "speaker": "Margaret Heffernan",
+    "source": "TED",
+    "url": "https://www.ted.com/talks/margaret_heffernan_forget_the_pecking_order_at_work",
+    "minutes": 15,
+    "why": "Peer dynamics: collaboration beats internal 'superchicken' competition.",
+    "status": "pending"
+   },
+   {
+    "sessionId": "competition",
+    "title": "Two reasons companies fail — and how to avoid them",
+    "speaker": "Knut Haanaes",
+    "source": "TED",
+    "url": "https://www.ted.com/talks/knut_haanaes_two_reasons_companies_fail_and_how_to_avoid_them",
+    "minutes": 12,
+    "why": "Competitive strategy — balancing exploiting today with exploring tomorrow.",
+    "status": "pending"
+   },
+   {
+    "sessionId": "environment",
+    "title": "The best stats you've ever seen",
+    "speaker": "Hans Rosling",
+    "source": "TED",
+    "url": "https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen",
+    "minutes": 21,
+    "why": "Reading the wider global/economic environment through data. NOTE: ~21 min, just over the 20-min cap.",
+    "status": "pending"
+   },
+   {
+    "sessionId": "self-awareness",
+    "title": "Increase your self-awareness with one simple fix",
+    "speaker": "Tasha Eurich",
+    "source": "YouTube (TEDxMileHigh)",
+    "url": "https://www.youtube.com/watch?v=tGdsOXZpyWE",
+    "minutes": 15,
+    "why": "Strengths and how others see you — the 'what' not 'why' reframe.",
+    "status": "pending"
+   },
+   {
+    "sessionId": "metrics",
+    "title": "The puzzle of motivation",
+    "speaker": "Dan Pink",
+    "source": "TED",
+    "url": "https://www.ted.com/talks/dan_pink_the_puzzle_of_motivation",
+    "minutes": 18,
+    "why": "What actually drives performance — measuring what matters vs. crude incentives.",
+    "status": "pending"
+   },
+   {
+    "sessionId": "creating-value",
+    "title": "How great leaders inspire action",
+    "speaker": "Simon Sinek",
+    "source": "TED",
+    "url": "https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action",
+    "minutes": 18,
+    "why": "Start with why — framing value and purpose (the Golden Circle).",
+    "status": "pending"
+   },
+   {
+    "sessionId": "politics",
+    "title": "The surprising habits of original thinkers",
+    "speaker": "Adam Grant",
+    "source": "TED",
+    "url": "https://www.ted.com/talks/adam_grant_the_surprising_habits_of_original_thinkers",
+    "minutes": 15,
+    "why": "Championing ideas and navigating an organization with integrity.",
+    "status": "pending"
+   },
+   {
+    "sessionId": "budget",
+    "title": "What gives a dollar bill its value?",
+    "speaker": "Doug Levinson",
+    "source": "TED-Ed",
+    "url": "https://www.ted.com/talks/doug_levinson_what_gives_a_dollar_bill_its_value",
+    "minutes": 5,
+    "why": "Money, the Fed, inflation/deflation — financial & macro fundamentals in 5 min.",
+    "status": "pending"
+   },
+   {
+    "sessionId": "charisma",
+    "title": "How to build (and rebuild) trust",
+    "speaker": "Frances Frei",
+    "source": "TED",
+    "url": "https://www.ted.com/talks/frances_frei_how_to_build_and_rebuild_trust",
+    "minutes": 15,
+    "why": "Authenticity, empathy, logic — the components of presence and trust.",
+    "status": "pending"
+   }
+  ]
+ }
+]
