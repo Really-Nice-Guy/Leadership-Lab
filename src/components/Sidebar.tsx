@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { ChatCircle, Target, Brain, Sparkle } from 'phosphor-react';
 import { loadSessions, loadArticles } from '../utils/dataLoader';
 import { getProgressStats, getLastVisited } from '../utils/progress';
+import ProfileLink from './ProfileLink';
 
 interface LastVisited {
   type: 'session' | 'article';
@@ -113,6 +114,10 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
               </Link>
             );
           })}
+
+          <div className="border-t border-white/10 mx-3 my-2" />
+          <p className="text-[10px] font-bold text-gray-600 uppercase tracking-widest px-3 mb-2 mt-3">Beyond the Lab</p>
+          <ProfileLink variant="sidebar" onClick={onClose} />
         </nav>
 
         <div className="border-t border-white/10 mx-4 my-2" />

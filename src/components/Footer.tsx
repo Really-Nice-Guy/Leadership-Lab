@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { loadArticles } from '../utils/dataLoader';
+import ProfileLink from './ProfileLink';
 import type { Article } from '../types';
 
 export default function Footer() {
@@ -73,6 +74,11 @@ export default function Footer() {
               <li>Evidence-Based Content</li>
             </ul>
           </div>
+        </div>
+
+        <div className="mt-10">
+          <h4 className="font-semibold mb-3 text-sm">Beyond the Lab</h4>
+          <ProfileLink variant="footer" />
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">

@@ -3,6 +3,7 @@ import { ChatCircle, Target, Brain, Sparkle, ArrowRight } from 'phosphor-react';
 import { useEffect, useState } from 'react';
 import { loadArticles, loadSessions } from '../utils/dataLoader';
 import { getLastVisited, getProgressStats } from '../utils/progress';
+import ProfileLink from '../components/ProfileLink';
 import type { Article } from '../types';
 
 interface LastVisited {
@@ -119,6 +120,7 @@ export default function Home() {
             >
               Browse Articles
             </Link>
+            <ProfileLink variant="hero" />
           </div>
         </div>
       </section>
@@ -286,6 +288,16 @@ export default function Home() {
               </div>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* ── Leadership Profile (external portfolio) ──────────── */}
+      <section className="px-6 py-12 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
+            Beyond the Lab
+          </p>
+          <ProfileLink variant="card" />
         </div>
       </section>
     </div>
